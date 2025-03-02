@@ -49,13 +49,13 @@ permalink: /resume/
             <h4>Senior Examination Specialist (Model Risk)</h4>
             <p class="subtitle">FHFA, Division of Enterprise Regulation, Office of Modeling | March 2020 - May 2024</p>
             <ul>
-				<li>Conducted ongoing monitoring and targeted examinations of model risk at Fannie Mae and Freddie Mac </li>
+				<li>Conducted model risk ongoing monitoring and targeted examinations at housing banks </li>
 				<li>Guided supervision with internal model risk analytics dashboard built with R Shiny</li>
-				<li>Authored advisory bulletin sections and supervisory letters on emerging risks like generative AI</li>
+				<li>Authored advisory bulletin sections and supervisory letters on emerging risk areas</li>
 				<li>Transformed model risk assessments into data-driven, quantitative, and reproducible reports</li>
-				<li>Produced and automated quarterly reports on model inventories and house price projections</li>
-				<li>Developed proposal on fine-tuning and deploying in-house, pre-trained LLMs for supervision</li>
-				<li>Earned a promotion from Examination Speciailist to Senior Examination Specialist in March 2023</li>
+				<li>Automated quarterly reports on model inventories and house price projections</li>
+				<li>Developed proposal on fine-tuning/deploying in-house, pre-trained LLMs for supervision</li>
+				<li>Earned a promotion from Examination Speciailist to Senior Examination Specialist in 2023</li>
 			</ul>
         </div>
 		
@@ -66,7 +66,7 @@ permalink: /resume/
             <ul>
 				<li>Developed AI permissible use policy and supported AI program rollout in 50% part-time role</li>
 				<li>Launched the AI Steering Committee and created/moderated the AI Teams Channel</li>
-				<li>Designed the website for FHFA's TechSpring competition: Generative AI in Housing Finance</li>
+				<li>Designed website for FHFA's TechSprint competition: Generative AI in Housing Finance</li>
         	</ul>
 		</div>
 		
@@ -76,11 +76,11 @@ permalink: /resume/
             <p class="subtitle">Horizon Actuarial Services | January 2017 - March 2020</p>
             <ul>
 				<li>Completed valuations for multiemployer pension plans with $10B+ in assets and liabilities</li>
-				<li>Analyzed work levels and labor costs, projected cost of changes to benefits and contributions</li>
-				<li>Prototyped as Data Committee Lead an open-source valuation process with savings of $20k/user/year</li>
+				<li>Analyzed work levels and labor costs, projected cost of changes to benefits/contributions</li>
+				<li>Led Data Committee, prototyped an open-source valuation process saving $20k/user/year</li>
 				<li>Presented annual pension fund valuation results to technical and non-technical audiences</li>
-				<li>Created and deployed a suite of efficiency-boosting MS Office add-ins, adopted by 20+ users</li>
-				<li>Received a promotion from Actuarial Anlayst to Actuary in January 2020</li>
+				<li>Created and deployed a suite of efficiency-boosting MS Office add-ins for 20+ users</li>
+				<li>Received a promotion from Actuarial Anlayst to Actuary in 2019</li>
 			</ul>
         </div>
 		
@@ -98,7 +98,7 @@ permalink: /resume/
             <h4>Teacher (EFL and English Literature)</h4>
             <p class="subtitle">Finance Inc. | August 2014 - May 2016</p>
             <ul>
-				<li>Developed and taught custom EFL and English literature curriculum, specializing in 20th century novels</li>
+				<li>Developed and taught custom EFL and English literature curriculum</li>
 				<li>Received #1 rating of all teachers in final three academic terms</li>
 			</ul>
 		</div>
@@ -131,7 +131,7 @@ permalink: /resume/
     <div class="resume-section">
         <h3>📓 Trainings</h3>
         <ul>
-			<li> AWS Cloud Practitioner | 2025<li>
+			<li> AWS Cloud Practitioner | 2025</li>
             <li> Certified Scrum Master | 2025</li>
 			<li> School of Mortgage Banking I/II, Mortgage Bankers Association | 2021/2023</li>
 			<li> Inclusive Leadership Development | 2023</li>
@@ -143,7 +143,7 @@ permalink: /resume/
     <div class="resume-section">
         <h3>📚 Non-Degree Education</h3>
         <ul>
-			<li> George Mason University, Course in Relational Databases | 2019<li>
+			<li> George Mason University, Course in Relational Databases | 2019</li>
             <li> Nova Community College, Courses in Computer Organization and Programming | 2018</li>
         </ul>
     </div>

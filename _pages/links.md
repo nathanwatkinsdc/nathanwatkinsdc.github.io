@@ -30,7 +30,7 @@ permalink: /links/
 - [Franklin Delano Roosevelt Memorial, Washington, DC](https://www.nps.gov/frde/index.htm)
 - [Parc des Buttes Chaumont, Paris](https://en.wikipedia.org/wiki/Parc_des_Buttes_Chaumont)
 
-## 🎉 Favorite Things
+## 🛍️ Favorite Things
 - [ABC Jogger](https://shop.lululemon.com/c/men-abc-joggers/n1ecp3zsddx)
 - [Bombas - Men's Vintage Stripes Half Calf Socks](https://bombas.com/products/mens-vintage-stripes-half-calf-socks?variant=wine)
 - [LEGO - Vincent Van Gogh - Starry Night](https://www.lego.com/en-us/product/vincent-van-gogh-the-starry-night-21333)
