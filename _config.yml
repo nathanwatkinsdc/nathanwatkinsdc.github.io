@@ -1,0 +1,34 @@
+title: "My Personal Blog"
+author: "Your Name"
+description: "A personal blog and portfolio by Your Name."
+baseurl: ""  # Leave empty for GitHub Pages
+url: "https://yourusername.github.io"  # Replace with your GitHub Pages URL
+
+# Theme (Jekyll has built-in themes like "minima")
+theme: minima  # You can replace this with another theme
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed  # Enables RSS feed for your blog
+  - jekyll-seo-tag  # Improves SEO metadata
+  - jekyll-sitemap  # Generates a sitemap.xml for better search engine indexing
+
+# Navigation links
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "Blog"
+    url: "/blog/"
+  - title: "Resume"
+    url: "/resume/"
+  - title: "Links"
+    url: "/links/"
+
+# Exclude unnecessary files from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
