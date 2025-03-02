@@ -2,19 +2,25 @@ title: "My Personal Blog"
 author: "Your Name"
 description: "A personal blog and portfolio by Your Name."
 baseurl: ""  # Leave empty for GitHub Pages
-url: "https://yourusername.github.io"  # Replace with your GitHub Pages URL
+url: "https://nathanwatkinsdc.github.io"  # Replace with your actual GitHub Pages URL
 
-# Theme (Jekyll has built-in themes like "minima")
-theme: minima  # You can replace this with another theme
+# Theme (default is Minima, but you can change it)
+theme: minima  
+
+# Enable Jekyll collections for pages (so /blog/ instead of /blog.html)
+collections:
+  pages:
+    output: true
+    permalink: /:basename/
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed  # Enables RSS feed for your blog
   - jekyll-seo-tag  # Improves SEO metadata
-  - jekyll-sitemap  # Generates a sitemap.xml for better search engine indexing
+  - jekyll-sitemap  # Generates a sitemap.xml for search engines
 
-# Navigation links
+# Navigation links (used in _layouts/default.html)
 nav:
   - title: "Home"
     url: "/"
@@ -25,10 +31,11 @@ nav:
   - title: "Links"
     url: "/links/"
 
-# Exclude unnecessary files from build
+# Exclude unnecessary files from the build
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
   - node_modules
   - vendor
+  - .gitignore
