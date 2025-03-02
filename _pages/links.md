@@ -14,7 +14,7 @@ permalink: /links/
 
 ## 💡 Learning
 - [Georgia Tech Online Master of Science in Analytics](https://pe.gatech.edu/degrees/analytics) - I completed this program in 2023
-- [Georgia Tech Online Master of Science in Computer Science](https://omscs.gatech.edu/) - I'm enrolled in this program now
+- [Georgia Tech Online Master of Science in Computer Science](https://omscs.gatech.edu/) - I'm taking some courses in 2025
 - [edX](https://www.edx.org/) - I discovered the GT programs on this site
 - [Huberman Lab](https://www.hubermanlab.com/) - I'm a huge fan of Andrew Huberman's podcast
 - ['Creating Desirable Difficulties to Enhance Learning' by Elizabeth and Robert Bjork](https://bjorklab.psych.ucla.edu/wp-content/uploads/sites/13/2016/04/EBjork_RBjork_2011.pdf) - reading and studying this article changed my life
@@ -35,7 +35,7 @@ permalink: /links/
 
 ## 🛍️ Favorite Things
 - [ABC Jogger](https://shop.lululemon.com/c/men-abc-joggers/n1ecp3zsddx) - hands down, my favorite pants on earth
-- [Bombas - Men's Vintage Stripes Half Calf Socks](https://bombas.com/products/mens-vintage-stripes-half-calf-socks?variant=wine) - the only sock I own at this point
+- [Men's Vintage Stripes Half Calf Socks](https://bombas.com/products/mens-vintage-stripes-half-calf-socks?variant=wine) - the only sock I own at this point
 - [LEGO - Vincent Van Gogh - Starry Night](https://www.lego.com/en-us/product/vincent-van-gogh-the-starry-night-21333) - my next LEGO set for when I reach a personal goal
 
 ## 📝 Favorite Office Products
