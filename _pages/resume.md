@@ -14,15 +14,15 @@ permalink: /resume/
 		
 		<!-- Georgia Tech -->
         <div class="resume-card">
-            <h4>MS in Computational Data Analytics</h4>
-            <p class="subtitle">Georgia Institute of Technology | 2023</p>
+            <h4>MS in Analytics</h4>
+            <p class="subtitle">Georgia Institute of Technology | Specialization in Computational Data Analytics | 2023</p>
             <p><i>Select courses:</i> analytics, business, computing, databases, data mining, machine learning, modeling, practicum, regression, simulation</p>
         </div>
 		
 		<!-- Penn -->
         <div class="resume-card">
             <h4>BA in Economics and Mathematics</h4>
-            <p class="subtitle">University of Pennsylvania | 2013</p>
+            <p class="subtitle">University of Pennsylvania | Minor in Statistics | 2013</p>
             <p><i>Select courses:</i> abstract and linear algebra, calculus including real and complex analysis, econometrics, probability and statistics, programming </p>
         </div>
 	</div>
@@ -35,61 +35,73 @@ permalink: /resume/
         <div class="resume-card">
             <h4>Senior Risk Analyst (Financial Crimes)</h4>
             <p class="subtitle">Federal Housing Finance Agency (FHFA), Office of the Chief Accountant | May 2024 - Present</p>
-            <p> - Monitor risk of fraud and suspicioous activity at Fannie Mae and Freddie Mac </p>
-			<p> - Drive supervisory priorities by developing and maintaining custom Tableau dashboards </p>
-			<p> - Build cloud analytics platform and develop machine learning models to predict fraud </p>
-			<p> - Create intranet sites using R/HTML/CSS/JS and implement using CI/CD pipeline </p>
-			<p> - Automate processes using Python, SQL, and other modern business intelligence tools </p>
+			<ul>
+            	<li>Monitor risk of fraud and suspicioous activity at Fannie Mae and Freddie Mac</li>
+				<li>Drive supervisory priorities by developing and maintaining custom Tableau dashboards</li>
+				<li>Build cloud analytics platform and develop machine learning models to predict fraud</li>
+				<li>Create intranet sites using R/HTML/CSS/JS and implement using CI/CD pipeline</li>
+				<li>Automate processes using Python, SQL, and other modern business intelligence tools</li>
+			</ul>
         </div>
 
 		<!-- Senior Examination Specialist (Model Risk) -->
         <div class="resume-card">
             <h4>Senior Examination Specialist (Model Risk)</h4>
             <p class="subtitle">FHFA, Division of Enterprise Regulation, Office of Modeling | March 2020 - May 2024</p>
-            <p> - Conducted ongoing monitoring and targeted examinations of model risk at Fannie Mae and Freddie Mac </p>
-			<p> - Guided supervision with internal model risk analytics dashboard built with R Shiny </p>
-			<p> - Authored advisory bulletin sections and supervisory letters on emerging risks like generative AI </p>
-			<p> - Transformed model risk assessments into data-driven, quantitative, and reproducible reports </p>
-			<p> - Produced and automated quarterly reports on model inventories and house price projections </p>
-			<p> - Developed proposal on fine-tuning and deploying in-house, pre-trained LLMs for supervision </p>
-			<p> - Earned a promotion from Examination Speciailist to Senior Examination Specialist in March 2023 </p>
+            <ul>
+				<li>Conducted ongoing monitoring and targeted examinations of model risk at Fannie Mae and Freddie Mac </li>
+				<li>Guided supervision with internal model risk analytics dashboard built with R Shiny</li>
+				<li>Authored advisory bulletin sections and supervisory letters on emerging risks like generative AI</li>
+				<li>Transformed model risk assessments into data-driven, quantitative, and reproducible reports</li>
+				<li>Produced and automated quarterly reports on model inventories and house price projections</li>
+				<li>Developed proposal on fine-tuning and deploying in-house, pre-trained LLMs for supervision</li>
+				<li>Earned a promotion from Examination Speciailist to Senior Examination Specialist in March 2023</li>
+			</ul>
         </div>
 		
 		<!-- Senior Financial Technology & Innovation Specialist -->
         <div class="resume-card">
             <h4>Senior Fintech and Innovation Specialist</h4>
             <p class="subtitle">FHFA, Office of Financial Technology | December 2023 - May 2024</p>
-            <p> - Developed AI permissible use policy and supported AI program rollout in 50% part-time role </p>
-			<p> - Launched the AI Steering Committee and created/moderated the AI Teams Channel </p>
-			<p> - Designed the website for FHFA's TechSpring competition: Generative AI in Housing Finance </p>
-        </div>
+            <ul>
+				<li>Developed AI permissible use policy and supported AI program rollout in 50% part-time role</li>
+				<li>Launched the AI Steering Committee and created/moderated the AI Teams Channel</li>
+				<li>Designed the website for FHFA's TechSpring competition: Generative AI in Housing Finance</li>
+        	</ul>
+		</div>
 		
 		<!-- Actuary -->
         <div class="resume-card">
             <h4>Actuary</h4>
             <p class="subtitle">Horizon Actuarial Services | January 2017 - March 2020</p>
-            <p> - Completed valuations for multiemployer pension plans with $10B+ in assets and liabilities </p>
-			<p> - Analyzed work levels and labor costs, projected cost of changes to benefits and contributions </p>
-			<p> - Prototyped as Data Committee Lead an open-source valuation process with savings of $20k/user/year </p>
-			<p> - Presented annual pension fund valuation results to technical and non-technical audiences</p>
-			<p> - Created and deployed a suite of efficiency-boosting MS Office add-ins, adopted by 20+ users </p>
-			<p> - Received a promotion from Actuarial Anlayst to Actuary in January 2020 </p>
+            <ul>
+				<li>Completed valuations for multiemployer pension plans with $10B+ in assets and liabilities</li>
+				<li>Analyzed work levels and labor costs, projected cost of changes to benefits and contributions</li>
+				<li>Prototyped as Data Committee Lead an open-source valuation process with savings of $20k/user/year</li>
+				<li>Presented annual pension fund valuation results to technical and non-technical audiences</li>
+				<li>Created and deployed a suite of efficiency-boosting MS Office add-ins, adopted by 20+ users</li>
+				<li>Received a promotion from Actuarial Anlayst to Actuary in January 2020</li>
+			</ul>
         </div>
 		
 		<!-- Tutor -->
         <div class="resume-card">
             <h4>Tutor (English, Math, SAT)</h4>
             <p class="subtitle">Independent Contractor | August 2016 - January 2017</p>
-            <p> - Specialized in teaching calculus and pre-calculus to local high school students </p>
-        </div>
+            <ul>
+				<li>Specialized in teaching calculus and pre-calculus to local high school students</li>
+			</ul>
+		</div>
 		
 		<!-- English Teacher -->
         <div class="resume-card">
             <h4>Teacher (EFL and English Literature)</h4>
             <p class="subtitle">Finance Inc. | August 2014 - May 2016</p>
-            <p> - Developed and taught custom EFL and English literature curriculum, specializing in 20th century novels </p>
-			<p> - Received #1 rating of all teachers in final three academic terms </p>
-        </div>
+            <ul>
+				<li>Developed and taught custom EFL and English literature curriculum, specializing in 20th century novels</li>
+				<li>Received #1 rating of all teachers in final three academic terms</li>
+			</ul>
+		</div>
 	
     </div>
 
@@ -98,7 +110,6 @@ permalink: /resume/
         <h3>📜 Certifications</h3>
         <ul>
             <li> Associate of the Society of Actuaries | 2019</li>
-            <li> Certified Scrum Master | 2025</li>
         </ul>
     </div>
 	
@@ -107,12 +118,33 @@ permalink: /resume/
         <h3>⚒️ Skills</h3>
         <ul>
             <li> <b>Coding:</b> Java, JavaScript, MATLAB, Python, R, SAS, SQL</li>
-            <li> <b>Content and workflow management:</b> Airtable, GitHub, Power Automate, SharePoint, Trello </li>
-			<li> <b>Data:</b> databases, dplyr, FTP, Git/version control, pandas, structured/unstructured data, tidyr </li>
-			<li> <b>Data visualization:</b> d3, Dash, Excel, Flask, ggplot2, Plotly, Power BI, R Shiny, Tableau </li>
-			<li> <b>Machine learning:</b> supervised/unsupervised/deep/reinforcement learning algorithms </li>
-			<li> <b>Report automation:</b> Jupyter/Colab, LaTeX, Overleaf, MATLAB Report Generator, VBA </li>
-			<li> <b>Web design:</b> Adobe, Canva, CSS, HTML, Jekyll, Markdown, WordPress </li>
+            <li> <b>Content and workflow management:</b> Airtable, GitHub, Power Automate, SharePoint, Trello</li>
+			<li> <b>Data:</b> databases, dplyr, FTP, Git/version control, pandas, structured/unstructured data, tidyr</li>
+			<li> <b>Data visualization:</b> d3, Dash, Excel, Flask, ggplot2, Plotly, Power BI, R Shiny, Tableau</li>
+			<li> <b>Machine learning:</b> supervised/unsupervised/deep/reinforcement learning algorithms</li>
+			<li> <b>Report automation:</b> Jupyter/Colab, LaTeX, Overleaf, MATLAB Report Generator, VBA</li>
+			<li> <b>Web design:</b> Adobe, Canva, CSS, HTML, Jekyll, Markdown, WordPress</li>
+        </ul>
+    </div>
+	
+    <!-- Trainings -->
+    <div class="resume-section">
+        <h3>📓 Trainings</h3>
+        <ul>
+			<li> AWS Cloud Practitioner | 2025<li>
+            <li> Certified Scrum Master | 2025</li>
+			<li> School of Mortgage Banking I/II, Mortgage Bankers Association | 2021/2023</li>
+			<li> Inclusive Leadership Development | 2023</li>
+			<li> Tableau Beginner/Intermediate/Advanced | 2021/2022/2023</li>
+        </ul>
+    </div>
+	
+    <!-- Non-Degree Education -->
+    <div class="resume-section">
+        <h3>📚 Non-Degree Education</h3>
+        <ul>
+			<li> George Mason University, Course in Relational Databases | 2019<li>
+            <li> Nova Community College, Courses in Computer Organization and Programming | 2018</li>
         </ul>
     </div>
 
