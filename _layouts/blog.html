@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-title">My Website</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/resume/">Resume</a></li>
+                <li><a href="/links/">Links</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Blog Section -->
+    <main>
+        <h1>📖 My Blog</h1>
+
+        <div class="blog-container">
+            {% for post in site.posts %}
+                <div class="blog-card">
+                    <div class="blog-thumbnail-container">
+                        <a href="{{ post.url }}">
+                            <img src="{{ post.thumbnail | default: '/assets/images/default-thumbnail.jpg' }}" 
+                                 alt="{{ post.title }}" class="blog-thumbnail">
+                        </a>
+                    </div>
+                    <div class="blog-details">
+                        <h2>
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                        </h2>
+                        <p>{{ post.description | default: "No description available." }}</p>
+                        <a href="{{ post.url }}" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+
+</body>
+</html>
