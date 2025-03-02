@@ -5,6 +5,9 @@ permalink: /links/
 ---
 <h1 class="text-center">🔗 Miscellaneous Links</h1>
 
+<!-- horizontal line -->
+<hr />
+
 ## 👨🏼‍💻 My Links
 - [My GitHub](https://github.com/nathanwatkinsdc)
 - [My LinkedIn](https://linkedin.com/in/nathanlwatkins)
@@ -38,7 +41,7 @@ permalink: /links/
 ## 📝 Favorite Office Products
 - [AddValue Book Stand](https://www.amazon.com/AddValue-Adjustable-Multi-Purpose-Material-Ergonomic/dp/B093PV1Y44) - such a useful book stand
 - [Foam Yoga Blocks](https://www.theyogawarehouse.com/yoga-blocks.asp) - who needs monitor stands when you have yoga blocks?
-- [Wobble Board](https://www.amazon.com/AmazonBasics-Wobble-Balance-Board-Black/dp/B07DWKNXNY) - the key to sitting still at work
+- [Wobble Board](https://www.amazon.com/AmazonBasics-Wobble-Balance-Board-Black/dp/B07DWKNXNY) - great way to move in place at work
 
 ## 🍪 Favorite Foods
 - [Tate's Chocolate Chip Cookies](https://www.tatesbakeshop.com/chocolate-chip-cookies.html) - I won't disclose how often I eat these

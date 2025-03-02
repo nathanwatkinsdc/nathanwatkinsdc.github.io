@@ -2,6 +2,9 @@
 layout: default
 title: Home
 ---
-# Welcome to My Website!
+<h1 class="text-center">👋 Welcome </h1>
 
-This is my personal website where I share my thoughts, resume, and favorite links.
+<!-- horizontal line -->
+<hr />
+
+Please take a look around to learn a little more about me 😀

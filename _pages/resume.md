@@ -8,6 +8,9 @@ permalink: /resume/
     <h1 class="text-center">📃 My Resume</h1>
     <!-- ><p class="text-center">Explore my professional background, certifications, and resume.</p> -->
 
+<!-- horizontal line -->
+<hr />
+
 	<!-- Education -->
 	<div class="resume-section">
         <h3>🎓 Education</h3>
@@ -148,6 +151,7 @@ permalink: /resume/
         </ul>
     </div>
 	
+	<!-- horizontal line -->
 	<hr />
 
     <!-- Resume Download -->
