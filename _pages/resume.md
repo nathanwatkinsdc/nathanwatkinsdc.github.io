@@ -52,7 +52,7 @@ permalink: /resume/
 				<li>Conducted model risk ongoing monitoring and targeted examinations at housing banks </li>
 				<li>Guided supervision with internal model risk analytics dashboard built with R Shiny</li>
 				<li>Authored advisory bulletin sections and supervisory letters on emerging risk areas</li>
-				<li>Transformed model risk assessments into data-driven, quantitative, and reproducible reports</li>
+				<li>Transformed model risk assessments into data-driven and reproducible reports</li>
 				<li>Automated quarterly reports on model inventories and house price projections</li>
 				<li>Developed proposal on fine-tuning/deploying in-house, pre-trained LLMs for supervision</li>
 				<li>Earned a promotion from Examination Speciailist to Senior Examination Specialist in 2023</li>
@@ -147,6 +147,8 @@ permalink: /resume/
             <li> Nova Community College, Courses in Computer Organization and Programming | 2018</li>
         </ul>
     </div>
+	
+	<hr />
 
     <!-- Resume Download -->
     <div class="resume-section text-center">
