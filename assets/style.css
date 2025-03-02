@@ -8,26 +8,42 @@ body {
     color: #333;
 }
 
-/* Navbar styles */
+/* Navbar Styles */
 nav {
     background-color: #063970;
     padding: 10px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-radius: 8px;
 }
 
-nav ul {
+.nav-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
 }
 
-nav ul li {
-    display: inline;
+.nav-links li {
     margin: 0 15px;
 }
 
-nav ul li a {
+.nav-links li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -35,7 +51,7 @@ nav ul li a {
     border-radius: 4px;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
     background-color: #D1E4F7;
     color: #063970;
 }
@@ -47,4 +63,51 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+}
+
+/* Resume Page Styling */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.resume-section {
+    margin-bottom: 30px;
+}
+
+.resume-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.resume-card h4 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: gray;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.resume-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #063970;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.resume-button:hover {
+    background: #D1E4F7;
+    color: #063970;
 }
