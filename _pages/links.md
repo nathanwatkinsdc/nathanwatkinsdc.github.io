@@ -48,3 +48,8 @@ permalink: /links/
 - [Ladurée Macarons](https://www.laduree.us/) - I treat myself whenever I'm in Georgetown in DC
 - [Andy's Pizza](https://www.eatandyspizza.com/) - my favorite pizza spot in DC
 - [Rockland's BBQ](https://rocklands.com/) - my favorite restaurant and the only local spot serving fried okra
+
+## 📚 Favorite Books
+- [1Q84](https://en.wikipedia.org/wiki/1Q84) by Haruki Murakami
+- [Atlas of the Heart](https://brenebrown.com/book/atlas-of-the-heart/) by Brené Brown
+- [Thinking Fast and Slow](https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow) by Daniel Kahneman

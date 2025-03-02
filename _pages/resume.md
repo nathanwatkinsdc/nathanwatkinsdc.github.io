@@ -54,7 +54,7 @@ permalink: /resume/
 				<li>Transformed model risk assessments into data-driven and reproducible reports</li>
 				<li>Automated quarterly reports on model inventories and house price projections</li>
 				<li>Developed proposal on fine-tuning/deploying in-house, pre-trained LLMs for supervision</li>
-				<li>Earned a promotion from Examination Speciailist to Senior Examination Specialist in 2023</li>
+				<li>Earned a promotion from Examination Specialist to Senior Examination Specialist in 2023</li>
 			</ul>
         </div>
 		
@@ -79,7 +79,7 @@ permalink: /resume/
 				<li>Led Data Committee, prototyped an open-source valuation process saving $20k/user/year</li>
 				<li>Presented annual pension fund valuation results to technical and non-technical audiences</li>
 				<li>Created and deployed a suite of efficiency-boosting MS Office add-ins for 20+ users</li>
-				<li>Received a promotion from Actuarial Anlayst to Actuary in 2019</li>
+				<li>Received a promotion from Actuarial Analyst to Actuary in 2019</li>
 			</ul>
         </div>
 		
