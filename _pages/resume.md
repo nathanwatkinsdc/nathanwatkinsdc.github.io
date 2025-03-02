@@ -5,8 +5,27 @@ permalink: /resume/
 ---
 
 <div class="container">
-    <h1 class="text-center">💼 Professional Experience</h1>
-    <p class="text-center">Explore my professional background, certifications, and resume.</p>
+    <h1 class="text-center">📃 My Resume</h1>
+    <!-- ><p class="text-center">Explore my professional background, certifications, and resume.</p> -->
+
+	<!-- Education -->
+	<div class="resume-section">
+        <h3>🎓 Education</h3>
+		
+		<!-- Georgia Tech -->
+        <div class="resume-card">
+            <h4>MS in Computational Data Analytics</h4>
+            <p class="subtitle">Georgia Institute of Technology | 2023</p>
+            <p>Courses including... </p>
+        </div>
+		
+		<!-- Penn -->
+        <div class="resume-card">
+            <h4>BA in Economics and Mathematics</h4>
+            <p class="subtitle">University of Pennsylvania | 2013</p>
+            <p>Courses including...</p>
+        </div>
+	</div>
 
     <!-- Work Experience -->
     <div class="resume-section">
@@ -55,25 +74,6 @@ permalink: /resume/
         </div>
 	
     </div>
-	
-	<!-- Education -->
-	<div class="resume-section">
-        <h3>🎓 Education</h3>
-		
-		<!-- Georgia Tech -->
-        <div class="resume-card">
-            <h4>MS in Computational Data Analytics</h4>
-            <p class="subtitle">Georgia Institute of Technology | 2023</p>
-            <p>Courses including... </p>
-        </div>
-		
-		<!-- Penn -->
-        <div class="resume-card">
-            <h4>BA in Economics and Mathematics</h4>
-            <p class="subtitle">University of Pennsylvania | 2013</p>
-            <p>Courses including...</p>
-        </div>
-	</div>
 
     <!-- Certifications -->
     <div class="resume-section">
