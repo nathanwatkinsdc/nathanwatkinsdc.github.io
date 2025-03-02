@@ -11,7 +11,7 @@ theme: minima
 collections:
   pages:
     output: true
-    permalink: /:basename/
+    permalink: /:path/
 
 # Build settings
 markdown: kramdown
