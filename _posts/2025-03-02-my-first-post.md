@@ -2,7 +2,7 @@
 layout: default
 title: "My First Post"
 date: 2025-03-02
-thumbnail: /assets/images/dragons.jpg
+thumbnail: /assets/images/my-first-post.jpg
 description: "This is an introduction to my first blog post."
 ---
 
