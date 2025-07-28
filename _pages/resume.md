@@ -4,19 +4,28 @@ title: Resume
 permalink: /resume/
 ---
 
-<div class="container">
+	<div class="container">
     <!-- ><p class="text-center">Explore my professional background, certifications, and resume.</p> -->
 	
-	<!-- Education -->
+	<!-- Summary -->
+	<div class="resume-section">
+        <h3>🎯 Summary</h3>
+ 	<div class="resume-card">
+	<p>Strategic data scientist and former actuary with deep experience in fraud risk analytics, model governance, and federal workforce data. Known for building high-impact tools—from automated reporting systems and machine learning models to interactive R/Python dashboards—that influence policy, supervision, and organizational decision-making. Passionate about equity, data storytelling, and the responsible use of AI. Skilled in Python, R, SQL, Tableau, and more. ASA credentialed. Top-rated performer and award-winning leader at FHFA. Seeking senior analytics opportunities in NYC.</p>
+   	</div>
+    	</div>
+ 	
+ 	<!-- Education -->
 	<div class="resume-section">
         <h3>🎓 Education</h3>
 		
-		<!-- Georgia Tech -->
+	<!-- Georgia Tech -->
         <div class="resume-card">
             <h4>MS in Analytics</h4>
             <p class="subtitle">Georgia Institute of Technology | Specialization in Computational Data Analytics | 2023</p>
             <p><i>Select courses:</i> analytics, business, computing, databases, data mining, machine learning, modeling, practicum, regression, simulation</p>
-			<p><i>Capstone: </i>designed and deployed interactive dashboards and predictive models to compare pay equity, employee engagement, and workforce composition at FHFA versus peer financial regulators using FedScope and FEVS datasets covering 1M+ federal employees. Applied regression, ensemble models (random forest, gradient boosting), and Gini coefficient analysis to identify predictors of salary and inequality; findings directly informed union organizing and bargaining strategy at a U.S. regulatory agency.</p>
+		<p><i>Capstone: </i>designed and deployed interactive dashboards and predictive models to compare pay equity, employee engagement, and workforce composition at FHFA versus peer financial regulators using FedScope and FEVS datasets covering 1M+ federal employees. </p>
+   		<ul><li>Applied regression, ensemble models (random forest, gradient boosting), and Gini coefficient analysis to identify predictors of salary and inequality; findings directly informed union organizing and bargaining strategy at a U.S. regulatory agency.</li></ul>
         </div>
 		
 		<!-- Penn -->
@@ -142,4 +151,4 @@ permalink: /resume/
             Download Resume
         </a>
     </div>
-</div>
+	</div>
