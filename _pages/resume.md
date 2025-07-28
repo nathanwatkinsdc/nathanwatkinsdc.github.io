@@ -16,6 +16,7 @@ permalink: /resume/
             <h4>MS in Analytics</h4>
             <p class="subtitle">Georgia Institute of Technology | Specialization in Computational Data Analytics | 2023</p>
             <p><i>Select courses:</i> analytics, business, computing, databases, data mining, machine learning, modeling, practicum, regression, simulation</p>
+			<p><i>Capstone: </i>designed and deployed interactive dashboards and predictive models to compare pay equity, employee engagement, and workforce composition at FHFA versus peer financial regulators using FedScope and FEVS datasets covering 1M+ federal employees. Applied regression, ensemble models (random forest, gradient boosting), and Gini coefficient analysis to identify predictors of salary and inequality; findings directly informed union organizing and bargaining strategy at a U.S. regulatory agency.</p>
         </div>
 		
 		<!-- Penn -->
@@ -32,29 +33,29 @@ permalink: /resume/
 		
 		<!-- Senior Risk Analyst -->
         <div class="resume-card">
-            <h4>Senior Risk Analyst (Financial Crimes)</h4>
+            <h4>Senior Risk Analyst (Fraud Analytics)</h4>
             <p class="subtitle">Federal Housing Finance Agency (FHFA), Office of the Chief Accountant | May 2024 - Present</p>
 			<ul>
-            	<li>Monitor risk of fraud and suspicioous activity at Fannie Mae and Freddie Mac</li>
-				<li>Drive supervisory priorities by developing and maintaining custom Tableau dashboards</li>
-				<li>Build cloud analytics platform and develop machine learning models to predict fraud</li>
-				<li>Create intranet sites using R/HTML/CSS/JS and implement using CI/CD pipeline</li>
-				<li>Automate processes using Python, SQL, and other modern business intelligence tools</li>
+            	<li>Built FHFA’s first enterprise fraud monitoring system using monthly SAR loan-level data from Fannie Mae and Freddie Mac, integrating GTO overlays, macroeconomic indicators, and MLIS internal records to surface supervisory risks in an $8+ trillion portfolio.</li>
+				<li>Developed dynamic cycle time metrics, GTO exposure reports, and geospatial risk visuals (heatmaps, choropleths) using Jupyter, Plotly, and matplotlib to inform quarterly supervisory planning and reports of examination.</li>
+				<li>Proposed and designed supervised learning models to predict fraud-related losses across a $20B+ segment, exploring logistic regression and novel features.</li>
+				<li>Created internal analytics websites using R Markdown and R Shiny to deliver real-time visualizations of fraud trends and automate monthly reporting; redesigned the agency’s intranet page for fraud & financial crimes.</li>
+				<li>Led migration from Tableau to Power BI following license cuts, rebuilding dashboards and authoring training materials; effort saved $30K/yr for the division and $200K for the agency.</li>
+				<li>Maintained fraud surveillance workflows during a 2-FTE gap by automating cleaning, slicing, and export tasks in Python, ensuring uninterrupted internal reporting.</li>
+				<li>Earned promotion to Senior Data Scientist in newly created Data Science & Automation Branch (effective Q3 2025); recognized for automating fraud monitoring workflows and tasked with boosting analytical support to exam teams using data engineering, warehousing, and ML tools.</li>
 			</ul>
         </div>
 
 		<!-- Senior Examination Specialist (Model Risk) -->
         <div class="resume-card">
-            <h4>Senior Examination Specialist (Model Risk)</h4>
-            <p class="subtitle">FHFA, Division of Enterprise Regulation, Office of Modeling | March 2020 - May 2024</p>
+            <h4>Senior Risk Analyst (Model Risk)</h4>
+            <p class="subtitle">FHFA, Office of Modeling | March 2020 - May 2024</p>
             <ul>
-				<li>Conducted model risk ongoing monitoring and targeted examinations at housing banks </li>
-				<li>Guided supervision with internal model risk analytics dashboard built with R Shiny</li>
-				<li>Authored advisory bulletin sections and supervisory letters on emerging risk areas</li>
-				<li>Transformed model risk assessments into data-driven and reproducible reports</li>
-				<li>Automated quarterly reports on model inventories and house price projections</li>
-				<li>Developed proposal on fine-tuning/deploying in-house, pre-trained LLMs for supervision</li>
-				<li>Earned a promotion from Examination Specialist to Senior Examination Specialist in 2023</li>
+				<li>Monitored high-risk “core models” at regulated entities (credit, capital, AVMs, underwriting, etc.), curating risk intelligence using the CAMELSO framework for internal and exam team use.</li>
+				<li>Built interactive R Shiny dashboards to visualize model interdependencies, AI/ML usage, and output forecasts; tools informed supervisory priorities and included custom features.</li>
+				<li>Cut report production time in half by transforming qualitative assessments into reproducible, data-rich dashboards using Tableau, R, and Power Query—shaping year-end reports of examination and supervisory scope.</li>
+				<li>Co-authored FHFA Advisory Bulletin 2022-03 and independently authored a supervisory letter on ChatGPT/LLMs, guiding responsible AI use aligned with Executive Orders and FHFA policy.</li>
+				<li>Proposed an internal LLM-powered regulatory knowledge base to meet Congressional goals under budget constraints; delivered technical and policy recommendations to leadership.</li>
 			</ul>
         </div>
 		
@@ -63,9 +64,8 @@ permalink: /resume/
             <h4>Senior Fintech and Innovation Specialist</h4>
             <p class="subtitle">FHFA, Office of Financial Technology | December 2023 - May 2024</p>
             <ul>
-				<li>Developed AI permissible use policy and supported AI program rollout in 50% part-time role</li>
-				<li>Launched the AI Steering Committee and created/moderated the AI Teams Channel</li>
-				<li>Designed website for FHFA's TechSprint competition: Generative AI in Housing Finance</li>
+				<li>Drafted FHFA’s internal AI permissible use policy for 700+ employees; launched agency-wide AI Steering Committee and collaboration channels to guide adoption.</li>
+				<li>Built and led AI trainings for agency TechSprint, reducing vendor costs by $40K while increasing cross-divisional engagement with generative AI tools.</li>
         	</ul>
 		</div>
 		
@@ -74,12 +74,11 @@ permalink: /resume/
             <h4>Actuary</h4>
             <p class="subtitle">Horizon Actuarial Services | January 2017 - March 2020</p>
             <ul>
-				<li>Completed valuations for multiemployer pension plans with $10B+ in assets and liabilities</li>
-				<li>Analyzed work levels and labor costs, projected cost of changes to benefits/contributions</li>
-				<li>Led Data Committee, prototyped an open-source valuation process saving $20k/user/year</li>
-				<li>Presented annual pension fund valuation results to technical and non-technical audiences</li>
-				<li>Created and deployed a suite of efficiency-boosting MS Office add-ins for 20+ users</li>
-				<li>Received a promotion from Actuarial Analyst to Actuary in 2019</li>
+				<li>Led annual actuarial valuations for 8 multiemployer pension plans (e.g., trades, MLB, NHL) with $10B+ in assets; performed data cleaning, modeling, and regulatory report production.</li>
+				<li>Supported trustees with cost analyses and forecasts for collective bargaining, presenting scenarios informed by interest rate and workforce trends.</li>
+				<li>Piloted a new valuation prototype using Excel, Access, and Power Query to replace legacy software, proposing a $20K/user savings versus proprietary alternatives.</li>
+				<li>Created MS Office add-ins for 20+ actuaries to streamline valuation report editing, improving quality control and saving hours per user annually.</li>
+				<li>Attained the Associate of the Society of Actuaries (ASA) credential in 2019.</li>
 			</ul>
         </div>
 		
@@ -87,29 +86,15 @@ permalink: /resume/
         <div class="resume-card">
             <h4>Tutor (English, Math, SAT)</h4>
             <p class="subtitle">Independent Contractor | August 2016 - January 2017</p>
-            <ul>
-				<li>Specialized in teaching calculus and pre-calculus to local high school students</li>
-			</ul>
+
 		</div>
 		
 		<!-- English Teacher -->
         <div class="resume-card">
-            <h4>Teacher (EFL and English Literature)</h4>
-            <p class="subtitle">Finance Inc. | August 2014 - May 2016</p>
-            <ul>
-				<li>Developed and taught custom EFL and English literature curriculum</li>
-				<li>Received #1 rating of all teachers in final three academic terms</li>
-			</ul>
+            <h4>Teacher (English Language and Literature)</h4>
+            <p class="subtitle">Chungdahm Learning Institute | August 2014 - June 2016</p>
 		</div>
 	
-    </div>
-
-    <!-- Certifications -->
-    <div class="resume-section">
-        <h3>📜 Certifications</h3>
-        <ul>
-            <li> Associate of the Society of Actuaries | 2019</li>
-        </ul>
     </div>
 	
     <!-- Skills -->
