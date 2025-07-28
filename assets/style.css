@@ -176,3 +176,8 @@ main {
     text-decoration: underline;
 }
 
+/* Improve spacing between bullets */
+ul li {
+    margin-bottom: 0.4em; /* Adjust this value as needed */
+}
+
