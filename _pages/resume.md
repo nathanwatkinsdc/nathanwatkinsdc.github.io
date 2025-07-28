@@ -5,7 +5,7 @@ permalink: /resume/
 ---
 
 	<div class="container">
-    <!-- ><p class="text-center">Explore my professional background, certifications, and resume.</p> -->
+    <!-- <p class="text-center">Explore my professional background, certifications, and resume.</p> -->
 	
 	<!-- Summary -->
 	<div class="resume-section">
