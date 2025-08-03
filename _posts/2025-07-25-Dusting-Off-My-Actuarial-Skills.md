@@ -41,22 +41,26 @@ As it turns out, this problem is very elegant and could even make a fine actuari
 Note that we could calculate all these present values as annuities with biweekly payments, but that's not necessary so long as we're consistent. These are just estimates after all. Let's run some numbers, using 7% as our discount rate and the RP-2014 White Collar Male Mortality Table as our mortality table.
 
 The difference between the two offers can be represented as: **🧮 Present Value of Difference =** 
+
 $$
 \text{Tampa Advantage} = \text{PV of } 250\text{k for 19 years starting in year 5}
 $$
+
 $$
 \text{Jacksonville Advantage} = \text{PV of } 200\text{k for 4 years} + \text{PV of } 200\text{k for life starting at 65},
 $$
 
 where
 
-- $T$ = Present value of 19-year deferred annuity of $250k
-- $J₁$ = PV of 4-year annuity of $200k (years 1–4)
-- $J₂$ = PV of life annuity starting at 65 of $200k
+- \(T\) = Present value of 19-year deferred annuity of $250k
+- \(J₁\) = PV of 4-year annuity of $200k (years 1–4)
+- \(J₂\) = PV of life annuity starting at 65 of $200k
   
 so that
 
-$\text{Net Value of Tampa over Jacksonville} = T - (J₁ + J₂)$.
+$$
+\text{Net Value of Tampa over Jacksonville} = T - (J₁ + J₂).
+$$
 
 As a result, under the assumptions we've made, it looks like Tampa better offer financially speaking, presenting a financial advantage of about $580k vs. the Jacksonville offer:
 
