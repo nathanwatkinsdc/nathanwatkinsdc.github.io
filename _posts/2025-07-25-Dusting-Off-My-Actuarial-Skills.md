@@ -52,9 +52,9 @@ $$
 
 where
 
-- \(T\) = Present value of 19-year deferred annuity of $250k
-- \(J₁\) = PV of 4-year annuity of $200k (years 1–4)
-- \(J₂\) = PV of life annuity starting at 65 of $200k
+- \( T \) = Present value of 19-year deferred annuity of $250k
+- \( J₁ \) = PV of 4-year annuity of $200k (years 1–4)
+- \( J₂ \) = PV of life annuity starting at 65 of $200k
   
 so that
 
