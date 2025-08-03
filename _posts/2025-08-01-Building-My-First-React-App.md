@@ -25,7 +25,7 @@ Here are the features of my interactive journaling app:
 
 And here's a super satisfying screenshot of my work:
 
-![Screenshot of GHOST SCRAMBLE app in Chrome](/assets/images/ghostscramble_screenshot.png)
+<img src="/assets/images/ghostscramble_screenshot.png" alt="My photo description" style="width:50%; max-width:400px;">
 
 ### 🛠️ Tools and skills used
 I worked through a few versions of the app, trying to stretch my tech and design skills. Eventually I landed at a version exhibiting:
