@@ -6,4 +6,4 @@ Welcome to my personal blog and portfolio! This site is built using [Jekyll](htt
 - 🏠 **Home** – Introduction and overview of my site.
 - ✍️ **Blog** – My latest posts and thoughts.
 - 📄 **Resume** – My professional experience and skills.
-- 🔗 **Links** – A collection of useful links.
+- 🔗 **Links** – A collection of fun and possibly useful links.
