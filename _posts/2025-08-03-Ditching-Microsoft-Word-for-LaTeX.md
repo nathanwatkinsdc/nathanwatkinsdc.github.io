@@ -1,6 +1,6 @@
 ---
 layout: default
-title: “Ditching Microsoft Word for LaTeX”
+title: Ditching Microsoft Word for LaTeX
 date: 2025-08-03
 thumbnail: /assets/images/resume_latex.png
 description: Why I decided to take the leap and build a resume template that actually works
@@ -59,8 +59,11 @@ No more fighting with indentation or bullet point spacing. Just clean, semantic 
 I expected the delight of formatting consistency, but there were more things that surprised me and gave me that umami taste:
 
 **1. Speed:** Once set up, updating takes seconds. Adding a new job? Drop it into the experience file, recompile, done.
+
 **2. Professional credibility:** applying for analytical roles? Show up with a perfectly formatted, clearly structured resume, signaling that you care about details and understand good system design. 
+
 **3. Focus on content:** instead of wrestling with margins, spend more time crafting compelling bullet points because the formatting is handled programmatically.
+
 **4. Customization without chaos:** want different colors for different industries? Change two hex values. Need to adjust spacing? One variable. 
 
 ## ✅ The Reality Check
