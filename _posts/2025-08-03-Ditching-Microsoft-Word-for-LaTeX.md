@@ -76,6 +76,6 @@ Plus, there’s something deeply satisfying about having a resume that compiles 
 As someone who’s debugged enough Python scripts and SQL queries to know that reproducibility is everything, applying that same mindset to career documents just makes sense.
 
 ## 🎯 The Bottom Line
-LaTeX offers the mental clarity that comes from having one less frustrating tool in my workflow. If sounds good to you, I’ve [open-sourced the whole thing](https://nathanwatkinsdc.github.com/resume-latex). MIT license—use it however you want. If it helps you land a job, great. If it just saves you from one more Word-induced meltdown, that’s a win too. 
+LaTeX offers the mental clarity that comes from having one less frustrating tool in my workflow. If sounds good to you, I’ve [open-sourced the whole thing](https://github.com/nathanwatkinsdc/resume-latex). MIT license—use it however you want. If it helps you land a job, great. If it just saves you from one more Word-induced meltdown, that’s a win too. 
 
 And if you’re the kind of person who reads a blog post about LaTeX resume templates and thinks “this sounds useful,” you’re probably exactly the kind of professional I’d want to work with, so please via [LinkedIn](https://www.linkedin.com/in/nathanlwatkins) or the contact info on my [Resume](https://nathanwatkinsdc.github.io/resume/).
