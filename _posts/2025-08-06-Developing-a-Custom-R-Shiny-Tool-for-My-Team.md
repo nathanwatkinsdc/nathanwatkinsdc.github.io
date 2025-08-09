@@ -48,16 +48,15 @@ As RTO was introduced, so were budget cuts, so whatever solution we came up with
 ## 📸 Screenshots of our R Shiny tool
 Having developed an R Shiny dashboard or two before, it didn’t take too long to whip something up. With anonymized (and slightly silly) names, here’s what my coworkers and I see in our browsers when we want to log where we’ll be working on a given day:
 
-![Screenshot of main R Shiny window](/assets/images/screenshot-1.png)
+<img src="/assets/images/screenshot-1.png" alt="Screenshot of main R Shiny window" style="width:80%; max-width:700px;">
 
 Users interact with the window by entering for a given day where they’ll be working. Blank means default location, which is in the office. Other values include AWS (flex day), LOC1 (non-office location 1), etc. Users can check the other codes by navigating through the left-hand menu:
 
-![Screenshot of main R Shiny window](/assets/images/screenshot-2.png)
+<img src="/assets/images/screenshot-2.png" alt="Screenshot of R Shiny window" style="width:80%; max-width:700px;">
 
 Users can also check their colleagues’ work schedules to see when their flex days are, i.e., when they are regularly out of the office (e.g., every second Friday) by navigating the left-hand menu as well: 
 
-
-![Screenshot of main R Shiny window](/assets/images/screenshot-3.png)
+<img src="/assets/images/screenshot-3.png" alt="Screenshot of R Shiny window" style="width:80%; max-width:700px;">
 
 ## Developing your own R Shiny tool like mine
 If you want to implement a similar solution, here’s how to get started:
@@ -130,7 +129,8 @@ sudo cp -r attendance-tracking /srv/shiny-server/
 sudo chown -R shiny:shiny /srv/shiny-server/attendance-tracking
 
 # Install R dependencies
-sudo R -e "install.packages(c('shiny', 'DT', 'shinydashboard', 'shinyWidgets', 'jsonlite', 'DBI', 'RPostgreSQL', 'pool'), repos='https://cran.rstudio.com/')"
+sudo R -e "install.packages(c('shiny', 'DT', 'shinydashboard', 'shinyWidgets', 'jsonlite',
+'DBI', 'RPostgreSQL', 'pool'), repos='https://cran.rstudio.com/')"
 ```
 
 **3. Database Configuration**
