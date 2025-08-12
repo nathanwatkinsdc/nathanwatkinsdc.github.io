@@ -14,7 +14,7 @@ permalink: /links/
 
 ## 💡 Learning
 - [Georgia Tech Online Master of Science in Analytics](https://pe.gatech.edu/degrees/analytics) - I completed this program in 2023
-- [Georgia Tech Online Master of Science in Computer Science](https://omscs.gatech.edu/) - I'm taking some courses in 2025
+- [Georgia Tech Online Master of Science in Computer Science](https://omscs.gatech.edu/) - I take courses sometimes when I want to upskill
 - [edX](https://www.edx.org/) - I discovered the GT programs on this site
 - [Huberman Lab](https://www.hubermanlab.com/) - I'm a huge fan of Andrew Huberman's podcast
 - ['Creating Desirable Difficulties to Enhance Learning' by Elizabeth and Robert Bjork](https://bjorklab.psych.ucla.edu/wp-content/uploads/sites/13/2016/04/EBjork_RBjork_2011.pdf) - reading and studying this article changed my life
@@ -23,7 +23,7 @@ permalink: /links/
 - [Washington, DC Pickleball League](https://wdcpickleball.com) - I can't get enough of pickleball
 - [11six24 Pickleball Paddles](https://11six24.com/) - my current favorite pickeball paddle brand
 - [Philadelphia Marathon](https://www.philadelphiamarathon.com/) - I ran this race in 2013 and am running it again in 2025
-- [Hermannslauf](https://hermannslauf.de/) - I hope to run this race, in a small town where I was an exchange student, in 2026 
+- [Hermannslauf](https://hermannslauf.de/) - I hope to run this race, in a small town where I was an exchange student, in 2026 or 2027
 - [The Eras Tour in Charts](https://flourish.studio/blog/taylor-swift-data-visualization/) - I saw the Eras Tour too many times to admit
 
 ## 🌎 Favorite Places
@@ -45,8 +45,8 @@ permalink: /links/
 
 ## 🍪 Favorite Foods
 - [Tate's Chocolate Chip Cookies](https://www.tatesbakeshop.com/chocolate-chip-cookies.html) - I won't disclose how often I eat these
-- [Ladurée Macarons](https://www.laduree.us/) - I treat myself whenever I'm in Georgetown in DC
-- [Andy's Pizza](https://www.eatandyspizza.com/) - my favorite pizza spot in DC
+- [La Maison du Chocolat](https://www.lamaisonduchocolat.com/en_us) - I treat myself whenever I'm in SoHo
+- [Royce Chocolate](https://roycechocolate.com/) - a trip to Bryant Park or detour via Mitsuwa in Edgewater, NJ is always worth it
 - [Rockland's BBQ](https://rocklands.com/) - my favorite restaurant and the only local spot serving fried okra
 
 ## 📚 Favorite Books
