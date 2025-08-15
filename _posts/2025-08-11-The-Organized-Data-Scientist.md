@@ -136,7 +136,7 @@ The beauty is that each phase builds on the previous one without breaking existi
 ## 🏁 Getting started
 To get started using my template: 
 
-1. **Clone the template** from my [GitHub repository](https://github.com/your-username/data-science-template)
+1. **Clone the template** from my [GitHub repository](https://github.com/nathanwatkinsdc/project-folder-structure-template)
 2. **Run the setup script**: `make setup`
 3. **Customize the configuration** for your project
 4. **Start exploring** in the notebooks directory
