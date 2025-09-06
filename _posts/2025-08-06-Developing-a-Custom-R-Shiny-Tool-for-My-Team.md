@@ -4,6 +4,7 @@ title: Developing a Custom R Shiny Tool for My Team
 date: 2025-08-06
 thumbnail: /assets/images/shiny.png
 description: How I used R Shiny to reduce the friction involved with being called back to the office in early 2025
+tags: [app-development, R, Shiny, collaboration, automation, coding]
 ---
 
 # Making RTO a little more… Shiny
