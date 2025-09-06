@@ -140,14 +140,14 @@
                 
                 if (toggleBtn && tagContainer) {
                     toggleBtn.addEventListener('click', function() {
-                        const isVisible = tagContainer.style.display !== 'none';
+                        const isHidden = tagContainer.style.display === 'none';
                         
-                        if (isVisible) {
-                            tagContainer.style.display = 'none';
-                            toggleBtn.textContent = 'Show ▼';
-                        } else {
+                        if (isHidden) {
                             tagContainer.style.display = 'grid';
                             toggleBtn.textContent = 'Hide ▲';
+                        } else {
+                            tagContainer.style.display = 'none';
+                            toggleBtn.textContent = 'Show ▼';
                         }
                     });
                 }
