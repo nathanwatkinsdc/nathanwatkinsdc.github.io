@@ -128,10 +128,31 @@
             // Initialize everything
             try {
                 initializeTagFilters();
+                initializeToggleButton();
                 updateDisplay();
                 console.log('Initialization complete');
             } catch (error) {
                 console.error('Initialization error:', error);
+            }
+
+            // Initialize toggle button
+            function initializeToggleButton() {
+                const toggleBtn = document.getElementById('toggle-tags');
+                const tagContainer = document.getElementById('tag-filter-container');
+                
+                if (toggleBtn && tagContainer) {
+                    toggleBtn.addEventListener('click', function() {
+                        const isVisible = tagContainer.style.display !== 'none';
+                        
+                        if (isVisible) {
+                            tagContainer.style.display = 'none';
+                            toggleBtn.textContent = 'Show ▼';
+                        } else {
+                            tagContainer.style.display = 'grid';
+                            toggleBtn.textContent = 'Hide ▲';
+                        }
+                    });
+                }
             }
 
             // Initialize tag filters
