@@ -4,6 +4,7 @@ title: "GHOST SCRAMBLE Creative Device for Multidimensional Thinking"
 date: 2025-07-28
 thumbnail: /assets/images/ghostscramble.png
 description: An overview of a custom creative writing/thinking device that gets my brain flowing
+tags: [writing, creativity, German]
 ---
 
 # 🔮 Introducing GHOST SCRAMBLE: A Creative Device for Multidimensional Thinking
