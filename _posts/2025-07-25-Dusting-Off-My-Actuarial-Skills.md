@@ -4,6 +4,7 @@ title: "Dusting Off My Actuarial Skills"
 date: 2025-07-25
 thumbnail: /assets/images/actuarial.png
 description: A rough actuarial analysis of my friend's pretty awesome job options
+tags: [actuary, consulting, skills, decision-making] 
 ---
 
 # 🥼 Doctors make a good living
