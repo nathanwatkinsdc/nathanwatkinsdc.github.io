@@ -153,7 +153,7 @@
             }
 
             function initializeTagFilters() {
-                if (!tagFiltersContainer || !allCountSpan) {
+                if (!tagContainer) {
                     console.log('Tag filter elements not found, skipping tag functionality');
                     return;
                 }
@@ -187,7 +187,7 @@
                         <span class="tag-name">#${tag}</span>
                         <span class="tag-count">${count}</span>
                     `;
-                    tagFiltersContainer.appendChild(tagFilter);
+                    tagContainer.appendChild(tagFilter);
                 });
 
                 document.querySelectorAll('.tag-filter').forEach(filter => {
