@@ -86,7 +86,7 @@
         </div>
     </main>
 
-    <!-- Enhanced JavaScript -->
+    <!-- Enhanced JavaScript with Tag Filtering -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const searchInput = document.getElementById('search-input');
@@ -96,16 +96,107 @@
             const postsPerPageSelect = document.getElementById('posts-per-page');
             const loadMoreBtn = document.getElementById('load-more-btn');
             const loadMoreContainer = document.getElementById('load-more-container');
+            const tagFiltersContainer = document.getElementById('tag-filters');
+            const allCountSpan = document.getElementById('all-count');
             
             let currentlyVisible = 5;
             let totalPosts = blogCards.length;
             let filteredCards = blogCards;
+            let activeTag = 'all';
             let searchTimeout;
 
-            console.log(`Found ${totalPosts} blog posts`); // Debug log
+            console.log(`Found ${totalPosts} blog posts`);
 
-            // Initialize display
+            // Initialize tag filters and display
+            initializeTagFilters();
             updateDisplay();
+
+            // Initialize tag filters
+            function initializeTagFilters() {
+                const tagCounts = {};
+                
+                // Count occurrences of each tag
+                blogCards.forEach(card => {
+                    const tags = card.dataset.tags.trim();
+                    if (tags) {
+                        tags.split(' ').forEach(tag => {
+                            if (tag) {
+                                tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+                            }
+                        });
+                    }
+                });
+
+                // Sort tags by count (descending)
+                const sortedTags = Object.entries(tagCounts)
+                    .sort(([,a], [,b]) => b - a)
+                    .slice(0, 10); // Show top 10 tags
+
+                // Update "All Posts" count
+                allCountSpan.textContent = totalPosts;
+
+                // Create tag filter elements
+                sortedTags.forEach(([tag, count]) => {
+                    const tagFilter = document.createElement('div');
+                    tagFilter.className = 'tag-filter';
+                    tagFilter.dataset.tag = tag;
+                    tagFilter.innerHTML = `
+                        <span class="tag-name">#${tag}</span>
+                        <span class="tag-count">${count}</span>
+                    `;
+                    tagFiltersContainer.appendChild(tagFilter);
+                });
+
+                // Add click handlers to all tag filters
+                document.querySelectorAll('.tag-filter').forEach(filter => {
+                    filter.addEventListener('click', function() {
+                        const tag = this.dataset.tag;
+                        setActiveTag(tag);
+                    });
+                });
+            }
+
+            // Set active tag filter
+            function setActiveTag(tag) {
+                activeTag = tag;
+                
+                // Update active states
+                document.querySelectorAll('.tag-filter').forEach(filter => {
+                    filter.classList.remove('active');
+                });
+                document.querySelector(`[data-tag="${tag}"]`).classList.add('active');
+
+                // Clear search when filtering by tag
+                searchInput.value = '';
+                searchResults.style.display = 'none';
+
+                // Filter cards by tag
+                if (tag === 'all') {
+                    filteredCards = blogCards;
+                } else {
+                    filteredCards = blogCards.filter(card => {
+                        const tags = card.dataset.tags.trim();
+                        return tags.split(' ').includes(tag);
+                    });
+                }
+
+                currentlyVisible = 5;
+                updateDisplay();
+            }
+
+            // Make blog tags clickable
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('clickable-tag')) {
+                    const tag = e.target.dataset.tag;
+                    setActiveTag(tag);
+                    
+                    // Smooth scroll to top of blog section
+                    document.querySelector('.blog-main').scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
 
             // Posts per page selector
             postsPerPageSelect.addEventListener('change', function() {
@@ -131,10 +222,24 @@
                     const searchTerm = this.value.toLowerCase().trim();
                     
                     if (searchTerm === '') {
-                        filteredCards = blogCards;
+                        // Return to current tag filter when search is cleared
+                        if (activeTag === 'all') {
+                            filteredCards = blogCards;
+                        } else {
+                            filteredCards = blogCards.filter(card => {
+                                const tags = card.dataset.tags.trim();
+                                return tags.split(' ').includes(activeTag);
+                            });
+                        }
                         searchResults.style.display = 'none';
                     } else {
-                        filteredCards = blogCards.filter(card => {
+                        // Search within current tag filter
+                        let baseCards = activeTag === 'all' ? blogCards : blogCards.filter(card => {
+                            const tags = card.dataset.tags.trim();
+                            return tags.split(' ').includes(activeTag);
+                        });
+
+                        filteredCards = baseCards.filter(card => {
                             const title = card.dataset.title || '';
                             const description = card.dataset.description || '';
                             const tags = card.dataset.tags || '';
@@ -144,7 +249,8 @@
                                    tags.includes(searchTerm);
                         });
                         
-                        searchResults.innerHTML = `Found ${filteredCards.length} post${filteredCards.length !== 1 ? 's' : ''} matching "${searchTerm}"`;
+                        const tagContext = activeTag === 'all' ? '' : ` in #${activeTag}`;
+                        searchResults.innerHTML = `Found ${filteredCards.length} post${filteredCards.length !== 1 ? 's' : ''} matching "${searchTerm}"${tagContext}`;
                         searchResults.style.display = 'block';
                     }
                     
@@ -170,7 +276,7 @@
                     loadMoreBtn.textContent = `Load More (${filteredCards.length - currentlyVisible} remaining)`;
                 }
 
-                console.log(`Showing ${Math.min(currentlyVisible, filteredCards.length)} of ${filteredCards.length} posts`); // Debug log
+                console.log(`Showing ${Math.min(currentlyVisible, filteredCards.length)} of ${filteredCards.length} posts`);
             }
 
             function showAllPosts() {
