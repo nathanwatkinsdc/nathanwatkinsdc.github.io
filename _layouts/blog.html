@@ -29,24 +29,26 @@
         <hr />
 
         <div class="blog-layout">
-            <!-- Sidebar for tag filtering -->
-            <aside class="blog-sidebar">
-                <h3>Filter by Topic</h3>
-                <div class="tag-filter-container">
-                    <div class="tag-filter active" data-tag="all">
-                        <span class="tag-name">All Posts</span>
-                        <span class="tag-count" id="all-count">0</span>
-                    </div>
-                    <div id="tag-filters"></div>
-                </div>
-            </aside>
-
-            <!-- Main content area -->
             <div class="blog-main">
                 <!-- Search Bar -->
                 <div class="search-container">
                     <input type="text" id="search-input" placeholder="Search blog posts..." class="search-input">
                     <div id="search-results" class="search-results"></div>
+                </div>
+
+                <!-- Tag Filter Section -->
+                <div class="tag-filter-section">
+                    <div class="tag-filter-header">
+                        <h4>Filter by Topic:</h4>
+                        <button id="toggle-tags" class="toggle-tags-btn">Hide ▲</button>
+                    </div>
+                    <div class="tag-filter-container" id="tag-filter-container">
+                        <div class="tag-filter active" data-tag="all">
+                            <span class="tag-name">All Posts</span>
+                            <span class="tag-count" id="all-count">0</span>
+                        </div>
+                        <div id="tag-filters"></div>
+                    </div>
                 </div>
 
                 <!-- Posts per page selector -->
@@ -95,12 +97,11 @@
         </div>
     </main>
 
-    <!-- Enhanced JavaScript with Tag Filtering -->
+    <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             console.log('Blog script starting...');
             
-            // Get all elements
             const searchInput = document.getElementById('search-input');
             const searchResults = document.getElementById('search-results');
             const blogContainer = document.getElementById('blog-container');
@@ -113,7 +114,6 @@
             
             console.log(`Found ${blogCards.length} blog cards`);
             
-            // Check if elements exist
             if (!searchInput || !blogContainer || blogCards.length === 0) {
                 console.error('Missing required elements');
                 return;
@@ -121,11 +121,10 @@
             
             let currentlyVisible = 5;
             let totalPosts = blogCards.length;
-            let filteredCards = [...blogCards]; // Create a copy
+            let filteredCards = [...blogCards];
             let activeTag = 'all';
             let searchTimeout;
 
-            // Initialize everything
             try {
                 initializeTagFilters();
                 initializeToggleButton();
@@ -135,7 +134,6 @@
                 console.error('Initialization error:', error);
             }
 
-            // Initialize toggle button
             function initializeToggleButton() {
                 const toggleBtn = document.getElementById('toggle-tags');
                 const tagContainer = document.getElementById('tag-filter-container');
@@ -155,7 +153,6 @@
                 }
             }
 
-            // Initialize tag filters
             function initializeTagFilters() {
                 if (!tagFiltersContainer || !allCountSpan) {
                     console.log('Tag filter elements not found, skipping tag functionality');
@@ -164,7 +161,6 @@
                 
                 const tagCounts = {};
                 
-                // Count occurrences of each tag
                 blogCards.forEach(card => {
                     const tags = card.dataset.tags ? card.dataset.tags.trim() : '';
                     if (tags) {
@@ -178,15 +174,12 @@
 
                 console.log('Tag counts:', tagCounts);
 
-                // Sort tags by count (descending)
                 const sortedTags = Object.entries(tagCounts)
                     .sort(([,a], [,b]) => b - a)
-                    .slice(0, 10); // Show top 10 tags
+                    .slice(0, 10);
 
-                // Update "All Posts" count
                 allCountSpan.textContent = totalPosts;
 
-                // Create tag filter elements
                 sortedTags.forEach(([tag, count]) => {
                     const tagFilter = document.createElement('div');
                     tagFilter.className = 'tag-filter';
@@ -198,7 +191,6 @@
                     tagFiltersContainer.appendChild(tagFilter);
                 });
 
-                // Add click handlers to all tag filters
                 document.querySelectorAll('.tag-filter').forEach(filter => {
                     filter.addEventListener('click', function() {
                         const tag = this.dataset.tag;
@@ -207,12 +199,10 @@
                 });
             }
 
-            // Set active tag filter
             function setActiveTag(tag) {
                 console.log('Setting active tag:', tag);
                 activeTag = tag;
                 
-                // Update active states
                 document.querySelectorAll('.tag-filter').forEach(filter => {
                     filter.classList.remove('active');
                 });
@@ -221,7 +211,6 @@
                     activeFilter.classList.add('active');
                 }
 
-                // Clear search when filtering by tag
                 if (searchInput) {
                     searchInput.value = '';
                 }
@@ -229,7 +218,6 @@
                     searchResults.style.display = 'none';
                 }
 
-                // Filter cards by tag
                 if (tag === 'all') {
                     filteredCards = [...blogCards];
                 } else {
@@ -243,14 +231,12 @@
                 updateDisplay();
             }
 
-            // Make blog tags clickable
             document.addEventListener('click', function(e) {
                 if (e.target.classList.contains('clickable-tag')) {
                     const tag = e.target.dataset.tag;
                     if (tag) {
                         setActiveTag(tag);
                         
-                        // Smooth scroll to top of blog section
                         const blogMain = document.querySelector('.blog-main');
                         if (blogMain) {
                             blogMain.scrollIntoView({ 
@@ -262,7 +248,6 @@
                 }
             });
 
-            // Posts per page selector
             if (postsPerPageSelect) {
                 postsPerPageSelect.addEventListener('change', function() {
                     const value = this.value;
@@ -275,7 +260,6 @@
                 });
             }
 
-            // Load more functionality
             if (loadMoreBtn) {
                 loadMoreBtn.addEventListener('click', function() {
                     currentlyVisible += 5;
@@ -283,7 +267,6 @@
                 });
             }
 
-            // Search functionality
             if (searchInput) {
                 searchInput.addEventListener('input', function() {
                     clearTimeout(searchTimeout);
@@ -292,7 +275,6 @@
                         console.log('Searching for:', searchTerm);
                         
                         if (searchTerm === '') {
-                            // Return to current tag filter when search is cleared
                             if (activeTag === 'all') {
                                 filteredCards = [...blogCards];
                             } else {
@@ -305,7 +287,6 @@
                                 searchResults.style.display = 'none';
                             }
                         } else {
-                            // Search within current tag filter
                             let baseCards = activeTag === 'all' ? blogCards : blogCards.filter(card => {
                                 const tags = card.dataset.tags ? card.dataset.tags.trim() : '';
                                 return tags.split(' ').includes(activeTag);
@@ -337,17 +318,14 @@
             function updateDisplay() {
                 console.log(`Updating display: showing ${Math.min(currentlyVisible, filteredCards.length)} of ${filteredCards.length} posts`);
                 
-                // Hide all cards first
                 blogCards.forEach(card => {
                     card.style.display = 'none';
                 });
                 
-                // Show filtered cards up to currentlyVisible
                 filteredCards.slice(0, currentlyVisible).forEach(card => {
                     card.style.display = 'flex';
                 });
 
-                // Update load more button
                 if (loadMoreContainer && loadMoreBtn) {
                     if (currentlyVisible >= filteredCards.length) {
                         loadMoreContainer.style.display = 'none';
@@ -367,7 +345,6 @@
                 }
             }
 
-            // Debug: Check if posts are being found
             if (totalPosts === 0) {
                 blogContainer.innerHTML = '<p style="text-align: center; color: #666; font-style: italic;">No blog posts found. Make sure your posts are in the _posts directory and have proper front matter.</p>';
             }
