@@ -30,17 +30,12 @@
 
         <div class="blog-layout">
             <div class="blog-main">
-                <!-- Search Bar -->
-                <div class="search-container">
-                    <input type="text" id="search-input" placeholder="Search blog posts..." class="search-input">
-                    <div id="search-results" class="search-results"></div>
-                </div>
 
                 <!-- Tag Filter Section -->
                 <div class="tag-filter-section">
                     <div class="tag-filter-header">
                         <h4>Filter by Topic:</h4>
-                        <button id="toggle-tags" class="toggle-tags-btn">Hide ▲</button>
+                        <button id="toggle-tags" class="toggle-tags-btn">Show ▼</button>
                     </div>
                     <div class="tag-filter-container" id="tag-filter-container">
                         <div class="tag-filter active" data-tag="all">
@@ -49,6 +44,12 @@
                         </div>
                         <div id="tag-filters"></div>
                     </div>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search blog posts..." class="search-input">
+                    <div id="search-results" class="search-results"></div>
                 </div>
 
                 <!-- Posts per page selector -->
