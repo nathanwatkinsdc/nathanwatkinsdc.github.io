@@ -52,14 +52,7 @@
                             <img src="{{ post.thumbnail | default: '/assets/images/default-thumbnail.jpg' }}" 
                                  alt="{{ post.title }}" class="blog-thumbnail">
                         </a>
-                        <!-- Hashtags overlay on thumbnail -->
-                        {% if post.tags %}
-                            <div class="hashtags-overlay">
-                                {% for tag in post.tags limit:3 %}
-                                    <span class="hashtag">#{{ tag }}</span>
-                                {% endfor %}
-                            </div>
-                        {% endif %}
+
                     </div>
                     <div class="blog-details">
                         <h2>
