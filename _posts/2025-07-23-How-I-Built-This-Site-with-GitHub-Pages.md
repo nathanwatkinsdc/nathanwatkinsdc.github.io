@@ -4,6 +4,7 @@ title: "How I Built This Site with GitHub Pages"
 date: 2025-07-23
 thumbnail: /assets/images/githubpages.png
 description: A quick breakdown of how I built and deployed my personal website using Jekyll and GitHub Pages
+tags: [web-development, github, jekyll, tutorial, coding]
 ---
 
 # 🛠️ How I built this site with GitHub Pages
