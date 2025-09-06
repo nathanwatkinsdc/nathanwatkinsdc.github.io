@@ -180,25 +180,7 @@ main {
     object-fit: cover;
 }
 
-/* Hashtags overlay on thumbnail */
-.hashtags-overlay {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-}
 
-.hashtag {
-    background-color: rgba(6, 57, 112, 0.9);
-    color: white;
-    padding: 2px 6px;
-    border-radius: 10px;
-    font-size: 12px;
-    font-weight: bold;
-    backdrop-filter: blur(4px);
-}
 
 .blog-details {
     flex: 2;
@@ -257,6 +239,55 @@ main {
     text-decoration: underline;
 }
 
+/* Posts Control */
+.posts-control {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.posts-control label {
+    font-weight: 500;
+    color: #333;
+    margin-right: 8px;
+}
+
+.posts-control select {
+    padding: 6px 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 14px;
+}
+
+.posts-control select:focus {
+    outline: none;
+    border-color: #063970;
+}
+
+/* Load More Button */
+.load-more-container {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0;
+}
+
+.load-more-btn {
+    padding: 12px 24px;
+    background-color: #063970;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background-color: #D1E4F7;
+    color: #063970;
+}
+
 /* Pagination Styles */
 .pagination {
     display: flex;
@@ -273,14 +304,21 @@ main {
     background-color: #063970;
     color: white;
     text-decoration: none;
+    border: none;
     border-radius: 5px;
     font-weight: bold;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.pagination-btn:hover {
+.pagination-btn:hover:not(:disabled) {
     background-color: #D1E4F7;
     color: #063970;
+}
+
+.pagination-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
 .pagination-info {
