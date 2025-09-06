@@ -4,6 +4,7 @@ title: "GHOST SCRAMBLE: Building My First React App"
 date: 2025-08-01
 thumbnail: /assets/images/ghostscramble_thumbnail.png
 description: A brief summary of how I built my first React app using my GHOST SCRAMBLE creative device
+tags: [web-development, app-development, writing, creativity, React]
 ---
 
 ## 👷 Building my first React app
