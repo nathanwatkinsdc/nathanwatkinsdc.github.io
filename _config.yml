@@ -1,11 +1,15 @@
 title: "My Personal Blog"
-author: "Your Name"
-description: "A personal blog and portfolio by Your Name."
+author: "Nathan Watkins"
+description: "A personal blog and portfolio by Nathan Watkins."
 baseurl: ""  # Leave empty for GitHub Pages
-url: "https://nathanwatkinsdc.github.io"  # Replace with your actual GitHub Pages URL
+url: "https://nathanwatkinsdc.github.io"  # Add actual GitHub Pages URL
 
 # Theme (default is Minima, but you can change it)
 theme: minima  
+
+# Pagination settings - show only 5 (or whatever # I set as parameter) pages at a time
+paginate: 5
+paginate_path: "/blog/page:num/"
 
 # Enable Jekyll collections for pages (so /blog/ instead of /blog.html)
 collections:
@@ -19,6 +23,7 @@ plugins:
   - jekyll-feed  # Enables RSS feed for your blog
   - jekyll-seo-tag  # Improves SEO metadata
   - jekyll-sitemap  # Generates a sitemap.xml for search engines
+  - jekyll-paginate  # Enables pagination
 
 # Navigation links (used in _layouts/default.html)
 nav:
