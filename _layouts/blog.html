@@ -34,9 +34,19 @@
             <div id="search-results" class="search-results"></div>
         </div>
 
+        <!-- Posts per page selector -->
+        <div class="posts-control">
+            <label for="posts-per-page">Show: </label>
+            <select id="posts-per-page">
+                <option value="5">5 posts</option>
+                <option value="10">10 posts</option>
+                <option value="all">All posts</option>
+            </select>
+        </div>
+
         <div class="blog-container" id="blog-container">
-            {% for post in paginator.posts %}
-                <div class="blog-card" data-title="{{ post.title | downcase }}" data-description="{{ post.description | downcase }}" data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}">
+            {% for post in site.posts %}
+                <div class="blog-card" data-title="{{ post.title | downcase }}" data-description="{{ post.description | downcase }}" data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}" data-index="{{ forloop.index0 }}">
                     <div class="blog-thumbnail-container">
                         <a href="{{ post.url }}">
                             <img src="{{ post.thumbnail | default: '/assets/images/default-thumbnail.jpg' }}" 
@@ -70,71 +80,115 @@
             {% endfor %}
         </div>
 
-        <!-- Pagination Navigation -->
-        {% if paginator.total_pages > 1 %}
-            <div class="pagination">
-                {% if paginator.previous_page %}
-                    <a href="{{ paginator.previous_page_path }}" class="pagination-btn prev-btn">← Previous</a>
-                {% endif %}
-                
-                <div class="pagination-info">
-                    Page {{ paginator.page }} of {{ paginator.total_pages }}
-                </div>
-                
-                {% if paginator.next_page %}
-                    <a href="{{ paginator.next_page_path }}" class="pagination-btn next-btn">Next →</a>
-                {% endif %}
-            </div>
-        {% endif %}
+        <!-- Manual Pagination Controls -->
+        <div class="pagination" id="pagination" style="display: none;">
+            <button id="prev-btn" class="pagination-btn" disabled>← Previous</button>
+            <div class="pagination-info" id="pagination-info">Page 1 of 1</div>
+            <button id="next-btn" class="pagination-btn" disabled>Next →</button>
+        </div>
+
+        <!-- Load More Button (alternative to pagination) -->
+        <div class="load-more-container" id="load-more-container">
+            <button id="load-more-btn" class="load-more-btn">Load More Posts</button>
+        </div>
     </main>
 
-    <!-- Search functionality -->
+    <!-- Enhanced JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const searchInput = document.getElementById('search-input');
             const searchResults = document.getElementById('search-results');
             const blogContainer = document.getElementById('blog-container');
-            const blogCards = document.querySelectorAll('.blog-card');
-            const pagination = document.querySelector('.pagination');
-
+            const blogCards = Array.from(document.querySelectorAll('.blog-card'));
+            const postsPerPageSelect = document.getElementById('posts-per-page');
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            const loadMoreContainer = document.getElementById('load-more-container');
+            
+            let currentlyVisible = 5;
+            let totalPosts = blogCards.length;
+            let filteredCards = blogCards;
             let searchTimeout;
 
+            console.log(`Found ${totalPosts} blog posts`); // Debug log
+
+            // Initialize display
+            updateDisplay();
+
+            // Posts per page selector
+            postsPerPageSelect.addEventListener('change', function() {
+                const value = this.value;
+                if (value === 'all') {
+                    showAllPosts();
+                } else {
+                    currentlyVisible = parseInt(value);
+                    updateDisplay();
+                }
+            });
+
+            // Load more functionality
+            loadMoreBtn.addEventListener('click', function() {
+                currentlyVisible += 5;
+                updateDisplay();
+            });
+
+            // Search functionality
             searchInput.addEventListener('input', function() {
                 clearTimeout(searchTimeout);
                 searchTimeout = setTimeout(() => {
                     const searchTerm = this.value.toLowerCase().trim();
                     
                     if (searchTerm === '') {
-                        // Show all cards and pagination when search is empty
-                        blogCards.forEach(card => card.style.display = 'flex');
-                        if (pagination) pagination.style.display = 'flex';
+                        filteredCards = blogCards;
                         searchResults.style.display = 'none';
                     } else {
-                        // Hide pagination during search
-                        if (pagination) pagination.style.display = 'none';
-                        
-                        let matchCount = 0;
-                        blogCards.forEach(card => {
+                        filteredCards = blogCards.filter(card => {
                             const title = card.dataset.title || '';
                             const description = card.dataset.description || '';
                             const tags = card.dataset.tags || '';
                             
-                            if (title.includes(searchTerm) || 
-                                description.includes(searchTerm) || 
-                                tags.includes(searchTerm)) {
-                                card.style.display = 'flex';
-                                matchCount++;
-                            } else {
-                                card.style.display = 'none';
-                            }
+                            return title.includes(searchTerm) || 
+                                   description.includes(searchTerm) || 
+                                   tags.includes(searchTerm);
                         });
                         
-                        // Show search results info
-                        searchResults.innerHTML = `Found ${matchCount} post${matchCount !== 1 ? 's' : ''} matching "${searchTerm}"`;
-                        searchResults.style.display = matchCount === 0 ? 'block' : 'none';
+                        searchResults.innerHTML = `Found ${filteredCards.length} post${filteredCards.length !== 1 ? 's' : ''} matching "${searchTerm}"`;
+                        searchResults.style.display = 'block';
                     }
+                    
+                    currentlyVisible = 5;
+                    updateDisplay();
                 }, 300);
             });
+
+            function updateDisplay() {
+                // Hide all cards first
+                blogCards.forEach(card => card.style.display = 'none');
+                
+                // Show filtered cards up to currentlyVisible
+                filteredCards.slice(0, currentlyVisible).forEach(card => {
+                    card.style.display = 'flex';
+                });
+
+                // Update load more button
+                if (currentlyVisible >= filteredCards.length) {
+                    loadMoreContainer.style.display = 'none';
+                } else {
+                    loadMoreContainer.style.display = 'block';
+                    loadMoreBtn.textContent = `Load More (${filteredCards.length - currentlyVisible} remaining)`;
+                }
+
+                console.log(`Showing ${Math.min(currentlyVisible, filteredCards.length)} of ${filteredCards.length} posts`); // Debug log
+            }
+
+            function showAllPosts() {
+                filteredCards.forEach(card => card.style.display = 'flex');
+                loadMoreContainer.style.display = 'none';
+            }
+
+            // Debug: Check if posts are being found
+            if (totalPosts === 0) {
+                blogContainer.innerHTML = '<p style="text-align: center; color: #666; font-style: italic;">No blog posts found. Make sure your posts are in the _posts directory and have proper front matter.</p>';
+            }
         });
     </script>
 
