@@ -28,61 +28,70 @@
         <!-- horizontal line -->
         <hr />
 
-        <!-- Search Bar -->
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Search blog posts..." class="search-input">
-            <div id="search-results" class="search-results"></div>
-        </div>
-
-        <!-- Posts per page selector -->
-        <div class="posts-control">
-            <label for="posts-per-page">Show: </label>
-            <select id="posts-per-page">
-                <option value="5">5 posts</option>
-                <option value="10">10 posts</option>
-                <option value="all">All posts</option>
-            </select>
-        </div>
-
-        <div class="blog-container" id="blog-container">
-            {% for post in site.posts %}
-                <div class="blog-card" data-title="{{ post.title | downcase }}" data-description="{{ post.description | downcase }}" data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}" data-index="{{ forloop.index0 }}">
-                    <div class="blog-thumbnail-container">
-                        <a href="{{ post.url }}">
-                            <img src="{{ post.thumbnail | default: '/assets/images/default-thumbnail.jpg' }}" 
-                                 alt="{{ post.title }}" class="blog-thumbnail">
-                        </a>
-
+        <div class="blog-layout">
+            <!-- Sidebar for tag filtering -->
+            <aside class="blog-sidebar">
+                <h3>Filter by Topic</h3>
+                <div class="tag-filter-container">
+                    <div class="tag-filter active" data-tag="all">
+                        <span class="tag-name">All Posts</span>
+                        <span class="tag-count" id="all-count">0</span>
                     </div>
-                    <div class="blog-details">
-                        <h2>
-                            <a href="{{ post.url }}">{{ post.title }}</a>
-                        </h2>
-                        <p class="blog-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                        <p>{{ post.description | default: "No description available." }}</p>
-                        {% if post.tags %}
-                            <div class="blog-tags">
-                                {% for tag in post.tags %}
-                                    <span class="blog-tag">#{{ tag }}</span>
-                                {% endfor %}
-                            </div>
-                        {% endif %}
-                        <a href="{{ post.url }}" class="read-more">Read More →</a>
-                    </div>
+                    <div id="tag-filters"></div>
                 </div>
-            {% endfor %}
-        </div>
+            </aside>
 
-        <!-- Manual Pagination Controls -->
-        <div class="pagination" id="pagination" style="display: none;">
-            <button id="prev-btn" class="pagination-btn" disabled>← Previous</button>
-            <div class="pagination-info" id="pagination-info">Page 1 of 1</div>
-            <button id="next-btn" class="pagination-btn" disabled>Next →</button>
-        </div>
+            <!-- Main content area -->
+            <div class="blog-main">
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search blog posts..." class="search-input">
+                    <div id="search-results" class="search-results"></div>
+                </div>
 
-        <!-- Load More Button (alternative to pagination) -->
-        <div class="load-more-container" id="load-more-container">
-            <button id="load-more-btn" class="load-more-btn">Load More Posts</button>
+                <!-- Posts per page selector -->
+                <div class="posts-control">
+                    <label for="posts-per-page">Show: </label>
+                    <select id="posts-per-page">
+                        <option value="5">5 posts</option>
+                        <option value="10">10 posts</option>
+                        <option value="all">All posts</option>
+                    </select>
+                </div>
+
+                <div class="blog-container" id="blog-container">
+                    {% for post in site.posts %}
+                        <div class="blog-card" data-title="{{ post.title | downcase }}" data-description="{{ post.description | downcase }}" data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}" data-index="{{ forloop.index0 }}">
+                            <div class="blog-thumbnail-container">
+                                <a href="{{ post.url }}">
+                                    <img src="{{ post.thumbnail | default: '/assets/images/default-thumbnail.jpg' }}" 
+                                         alt="{{ post.title }}" class="blog-thumbnail">
+                                </a>
+                            </div>
+                            <div class="blog-details">
+                                <h2>
+                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                </h2>
+                                <p class="blog-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                                <p>{{ post.description | default: "No description available." }}</p>
+                                {% if post.tags %}
+                                    <div class="blog-tags">
+                                        {% for tag in post.tags %}
+                                            <span class="blog-tag clickable-tag" data-tag="{{ tag | downcase }}">#{{ tag }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                                <a href="{{ post.url }}" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container" id="load-more-container">
+                    <button id="load-more-btn" class="load-more-btn">Load More Posts</button>
+                </div>
+            </div>
         </div>
     </main>
 
