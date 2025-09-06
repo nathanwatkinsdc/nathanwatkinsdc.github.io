@@ -265,12 +265,19 @@ main {
 /* Responsive Design */
 @media (max-width: 768px) {
     .tag-filter-container {
-        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 6px;
     }
     
     .tag-filter {
-        font-size: 13px;
-        padding: 5px 10px;
+        font-size: 12px;
+        padding: 3px 8px;
+        min-height: 26px;
+    }
+    
+    .tag-count {
+        font-size: 9px;
+        padding: 1px 4px;
     }
     
     .blog-card {
@@ -295,6 +302,18 @@ main {
     .nav-container {
         flex-direction: column;
         gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tag-filter-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    
+    .tag-filter-header {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
     }
 }
 
