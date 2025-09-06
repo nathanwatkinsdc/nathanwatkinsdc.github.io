@@ -37,6 +37,8 @@
                         <h4>Filter by Topic:</h4>
                         <button id="toggle-tags" class="toggle-tags-btn">Hide ▲</button>
                     </div>
+
+                    <!-- IMPORTANT: All Posts first, then dynamic tags -->
                     <div class="tag-filter-container" id="tag-filter-container">
                         <div class="tag-filter active" data-tag="all">
                             <span class="tag-name">All Posts</span>
@@ -139,12 +141,12 @@
             }
 
             function initializeToggleButton() {
-                const toggleBtn = document.getElementById('toggle-tags'); // define it here
+                const toggleBtn = document.getElementById('toggle-tags');
                 if (toggleBtn && tagContainer) {
                     toggleBtn.addEventListener('click', function() {
                         const isHidden = tagContainer.style.display === 'none';
                         if (isHidden) {
-                            tagContainer.style.display = 'flex'; // matches CSS
+                            tagContainer.style.display = 'grid'; // grid, not flex
                             toggleBtn.textContent = 'Hide ▲';
                         } else {
                             tagContainer.style.display = 'none';
@@ -163,17 +165,13 @@
                 const tagCounts = {};
                 
                 blogCards.forEach(card => {
-                    const tags = card.dataset.tags ? card.dataset.tags.trim() : '';
+                    const tags = (card.dataset.tags || '').trim();
                     if (tags) {
                         tags.split(' ').forEach(tag => {
-                            if (tag && tag.length > 0) {
-                                tagCounts[tag] = (tagCounts[tag] || 0) + 1;
-                            }
+                            if (tag) tagCounts[tag] = (tagCounts[tag] || 0) + 1;
                         });
                     }
                 });
-
-                console.log('Tag counts:', tagCounts);
 
                 const sortedTags = Object.entries(tagCounts)
                     .sort(([,a], [,b]) => b - a)
@@ -181,6 +179,8 @@
 
                 allCountSpan.textContent = totalPosts;
 
+                // Append dynamic tags AFTER the "All Posts" chip
+                const target = tagFilters || tagContainer;
                 sortedTags.forEach(([tag, count]) => {
                     const tagFilter = document.createElement('div');
                     tagFilter.className = 'tag-filter';
@@ -189,9 +189,16 @@
                         <span class="tag-name">#${tag}</span>
                         <span class="tag-count">${count}</span>
                     `;
-                    (tagFilters || tagContainer).appendChild(tagFilter);
+                    target.appendChild(tagFilter);
                 });
 
+                // Column-wise packing: set number of rows for 4 columns
+                const totalChips = 1 /* All Posts */ + sortedTags.length;
+                const columns = 4;
+                const rows = Math.ceil(totalChips / columns);
+                tagContainer.style.gridTemplateRows = `repeat(${rows}, minmax(min-content, max-content))`;
+
+                // Click handlers
                 document.querySelectorAll('.tag-filter').forEach(filter => {
                     filter.addEventListener('click', function() {
                         const tag = this.dataset.tag;
@@ -208,9 +215,7 @@
                     filter.classList.remove('active');
                 });
                 const activeFilter = document.querySelector(`[data-tag="${tag}"]`);
-                if (activeFilter) {
-                    activeFilter.classList.add('active');
-                }
+                if (activeFilter) activeFilter.classList.add('active');
 
                 if (searchInput) searchInput.value = '';
                 if (searchResults) searchResults.style.display = 'none';
@@ -219,7 +224,7 @@
                     filteredCards = [...blogCards];
                 } else {
                     filteredCards = blogCards.filter(card => {
-                        const tags = card.dataset.tags ? card.dataset.tags.trim() : '';
+                        const tags = (card.dataset.tags || '').trim();
                         return tags.split(' ').includes(tag);
                     });
                 }
@@ -271,20 +276,20 @@
                         console.log('Searching for:', searchTerm);
                         
                         if (searchTerm === '') {
-                            if (activeTag === 'all') {
-                                filteredCards = [...blogCards];
-                            } else {
-                                filteredCards = blogCards.filter(card => {
-                                    const tags = card.dataset.tags ? card.dataset.tags.trim() : '';
+                            filteredCards = (activeTag === 'all')
+                                ? [...blogCards]
+                                : blogCards.filter(card => {
+                                    const tags = (card.dataset.tags || '').trim();
                                     return tags.split(' ').includes(activeTag);
-                                });
-                            }
+                                  });
                             if (searchResults) searchResults.style.display = 'none';
                         } else {
-                            const baseCards = activeTag === 'all' ? blogCards : blogCards.filter(card => {
-                                const tags = card.dataset.tags ? card.dataset.tags.trim() : '';
-                                return tags.split(' ').includes(activeTag);
-                            });
+                            const baseCards = (activeTag === 'all')
+                                ? blogCards
+                                : blogCards.filter(card => {
+                                    const tags = (card.dataset.tags || '').trim();
+                                    return tags.split(' ').includes(activeTag);
+                                  });
 
                             filteredCards = baseCards.filter(card => {
                                 const title = card.dataset.title || '';
@@ -311,10 +316,7 @@
             function updateDisplay() {
                 console.log(`Updating display: showing ${Math.min(currentlyVisible, filteredCards.length)} of ${filteredCards.length} posts`);
                 
-                blogCards.forEach(card => {
-                    card.style.display = 'none';
-                });
-                
+                blogCards.forEach(card => { card.style.display = 'none'; });
                 filteredCards.slice(0, currentlyVisible).forEach(card => {
                     card.style.display = 'flex';
                 });
@@ -330,12 +332,8 @@
             }
 
             function showAllPosts() {
-                filteredCards.forEach(card => {
-                    card.style.display = 'flex';
-                });
-                if (loadMoreContainer) {
-                    loadMoreContainer.style.display = 'none';
-                }
+                filteredCards.forEach(card => { card.style.display = 'flex'; });
+                if (loadMoreContainer) loadMoreContainer.style.display = 'none';
             }
 
             if (totalPosts === 0) {
