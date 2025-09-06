@@ -110,6 +110,10 @@
             const postsPerPageSelect = document.getElementById('posts-per-page');
             const loadMoreBtn = document.getElementById('load-more-btn');
             const loadMoreContainer = document.getElementById('load-more-container');
+
+            const tagContainer = document.getElementById('tag-filter-container');
+            const tagFilters = document.getElementById('tag-filters'); // inner container for dynamic tags
+            const allCountSpan = document.getElementById('all-count');
             
             console.log(`Found ${blogCards.length} blog cards`);
             
@@ -134,8 +138,6 @@
             }
 
             function initializeToggleButton() {
-                const toggleBtn = document.getElementById('toggle-tags');
-                const tagContainer = document.getElementById('tag-filter-container');
                 
                 if (toggleBtn && tagContainer) {
                     toggleBtn.addEventListener('click', function() {
@@ -153,7 +155,7 @@
             }
 
             function initializeTagFilters() {
-                if (!tagContainer) {
+                if (!tagContainer || !allCountSpan) {
                     console.log('Tag filter elements not found, skipping tag functionality');
                     return;
                 }
