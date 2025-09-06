@@ -35,7 +35,7 @@
                 <div class="tag-filter-section">
                     <div class="tag-filter-header">
                         <h4>Filter by Topic:</h4>
-                        <button id="toggle-tags" class="toggle-tags-btn">Show ▼</button>
+                        <button id="toggle-tags" class="toggle-tags-btn">Hide ▲</button>
                     </div>
                     <div class="tag-filter-container" id="tag-filter-container">
                         <div class="tag-filter active" data-tag="all">
@@ -46,20 +46,21 @@
                     </div>
                 </div>
                 
-                <!-- Search Bar -->
-                <div class="search-container">
-                    <input type="text" id="search-input" placeholder="Search blog posts..." class="search-input">
-                    <div id="search-results" class="search-results"></div>
-                </div>
+                <!-- Controls Row (search + posts-per-page) -->
+                <div class="controls-bar">
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Search blog posts..." class="search-input">
+                        <div id="search-results" class="search-results"></div>
+                    </div>
 
-                <!-- Posts per page selector -->
-                <div class="posts-control">
-                    <label for="posts-per-page">Show: </label>
-                    <select id="posts-per-page">
-                        <option value="5">5 posts</option>
-                        <option value="10">10 posts</option>
-                        <option value="all">All posts</option>
-                    </select>
+                    <div class="posts-control">
+                        <label for="posts-per-page">Show:</label>
+                        <select id="posts-per-page">
+                            <option value="5">5 posts</option>
+                            <option value="10">10 posts</option>
+                            <option value="all">All posts</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="blog-container" id="blog-container">
@@ -123,7 +124,7 @@
             }
             
             let currentlyVisible = 5;
-            let totalPosts = blogCards.length;
+            const totalPosts = blogCards.length;
             let filteredCards = [...blogCards];
             let activeTag = 'all';
             let searchTimeout;
@@ -138,13 +139,12 @@
             }
 
             function initializeToggleButton() {
-                
+                const toggleBtn = document.getElementById('toggle-tags'); // define it here
                 if (toggleBtn && tagContainer) {
                     toggleBtn.addEventListener('click', function() {
                         const isHidden = tagContainer.style.display === 'none';
-                        
                         if (isHidden) {
-                            tagContainer.style.display = 'grid';
+                            tagContainer.style.display = 'flex'; // matches CSS
                             toggleBtn.textContent = 'Hide ▲';
                         } else {
                             tagContainer.style.display = 'none';
@@ -189,7 +189,7 @@
                         <span class="tag-name">#${tag}</span>
                         <span class="tag-count">${count}</span>
                     `;
-                    tagContainer.appendChild(tagFilter);
+                    (tagFilters || tagContainer).appendChild(tagFilter);
                 });
 
                 document.querySelectorAll('.tag-filter').forEach(filter => {
@@ -212,12 +212,8 @@
                     activeFilter.classList.add('active');
                 }
 
-                if (searchInput) {
-                    searchInput.value = '';
-                }
-                if (searchResults) {
-                    searchResults.style.display = 'none';
-                }
+                if (searchInput) searchInput.value = '';
+                if (searchResults) searchResults.style.display = 'none';
 
                 if (tag === 'all') {
                     filteredCards = [...blogCards];
@@ -237,7 +233,6 @@
                     const tag = e.target.dataset.tag;
                     if (tag) {
                         setActiveTag(tag);
-                        
                         const blogMain = document.querySelector('.blog-main');
                         if (blogMain) {
                             blogMain.scrollIntoView({ 
@@ -284,11 +279,9 @@
                                     return tags.split(' ').includes(activeTag);
                                 });
                             }
-                            if (searchResults) {
-                                searchResults.style.display = 'none';
-                            }
+                            if (searchResults) searchResults.style.display = 'none';
                         } else {
-                            let baseCards = activeTag === 'all' ? blogCards : blogCards.filter(card => {
+                            const baseCards = activeTag === 'all' ? blogCards : blogCards.filter(card => {
                                 const tags = card.dataset.tags ? card.dataset.tags.trim() : '';
                                 return tags.split(' ').includes(activeTag);
                             });
@@ -297,7 +290,6 @@
                                 const title = card.dataset.title || '';
                                 const description = card.dataset.description || '';
                                 const tags = card.dataset.tags || '';
-                                
                                 return title.includes(searchTerm) || 
                                        description.includes(searchTerm) || 
                                        tags.includes(searchTerm);
