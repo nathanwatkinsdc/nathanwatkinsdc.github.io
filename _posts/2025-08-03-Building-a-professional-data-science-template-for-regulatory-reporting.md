@@ -4,6 +4,7 @@ title: "Building a Professional Data Science Template for Regulatory Reporting"
 date: 2025-08-03
 thumbnail: /assets/images/regulatory.png
 description: Showcasing some of my efforts to make advanced analytics more accessible in government
+tags: [data-science, automated-reporting, python, fraud, analytics]
 ---
 
 # 🏛️ Building a professional data science template for regulatory reporting
