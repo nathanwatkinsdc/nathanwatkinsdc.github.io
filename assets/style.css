@@ -265,14 +265,14 @@ main {
 /* Responsive Design */
 @media (max-width: 768px) {
     .tag-filter-container {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 6px;
     }
     
     .tag-filter {
         font-size: 12px;
-        padding: 3px 8px;
-        min-height: 26px;
+        padding: 4px 8px;
+        min-height: 28px;
     }
     
     .tag-count {
@@ -288,6 +288,7 @@ main {
     .blog-thumbnail-container {
         height: 200px;
         width: 100%;
+        flex: none;
     }
     
     .search-input {
@@ -307,7 +308,7 @@ main {
 
 @media (max-width: 480px) {
     .tag-filter-container {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .tag-filter-header {
