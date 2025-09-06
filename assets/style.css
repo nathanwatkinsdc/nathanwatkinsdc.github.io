@@ -17,100 +17,39 @@ nav {
     justify-content: space-between;
     border-radius: 8px;
 }
-
 .nav-container {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
 }
-
-.nav-title {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 15px;
-}
-
-.nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
+.nav-title { color: white; font-size: 20px; font-weight: bold; margin-left: 15px; }
+.nav-links { list-style: none; padding: 0; margin: 0; display: flex; }
+.nav-links li { margin: 0 15px; }
 .nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 8px 12px;
-    border-radius: 4px;
+    text-decoration: none; color: white; font-weight: bold;
+    padding: 8px 12px; border-radius: 4px;
 }
-
-.nav-links li a:hover {
-    background-color: #D1E4F7;
-    color: #063970;
-}
+.nav-links li a:hover { background-color: #D1E4F7; color: #063970; }
 
 /* Content section */
 main {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    background: white; padding: 20px; border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-top: 20px;
 }
 
-/* Resume Page Styling */
-.container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-}
-
-.resume-section {
-    margin-bottom: 30px;
-}
-
+/* Resume Page (unchanged structure basics) */
+.container { max-width: 800px; margin: auto; padding: 20px; }
+.resume-section { margin-bottom: 30px; }
 .resume-card {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
+    background: white; padding: 15px; border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 15px;
 }
-
-.resume-card h4 {
-    margin: 0;
-    font-size: 20px;
-}
-
-.subtitle {
-    font-size: 14px;
-    color: gray;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.resume-button {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #063970;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.resume-button:hover {
-    background: #D1E4F7;
-    color: #063970;
-}
+.resume-card h4 { margin: 0; font-size: 20px; }
+.subtitle { font-size: 14px; color: gray; }
+.text-center { text-align: center; }
+.resume-button { display: inline-block; padding: 10px 15px; background: #063970; color: white; text-decoration: none; border-radius: 5px; }
+.resume-button:hover { background: #D1E4F7; color: #063970; }
 
 /* ---------- Controls Row (search + posts-per-page) ---------- */
 .controls-bar {
@@ -120,17 +59,16 @@ main {
     margin: 16px 0 24px;
     flex-wrap: wrap;
 }
-
-/* Search Container */
-.search-container {
-    flex: 1;               /* take remaining space */
-    margin-bottom: 0;      /* override old spacing */
-    text-align: left;      /* avoid centering the input */
+/* Narrower but flexible search */
+.controls-bar .search-container {
+    flex: 1 1 520px;   /* preferred width ~520px, can shrink or grow */
+    max-width: 600px;  /* hard cap to avoid hogging the row */
+    margin-bottom: 0;
+    text-align: left;
 }
-
-.search-input {
+.controls-bar .search-input {
     width: 100%;
-    max-width: none;       /* let it stretch */
+    max-width: 100%;
     padding: 12px 15px;
     font-size: 16px;
     border: 2px solid #ddd;
@@ -138,293 +76,125 @@ main {
     background-color: #f9f9f9;
     transition: border-color 0.3s ease;
 }
-
-.search-input:focus {
-    outline: none;
-    border-color: #063970;
-    background-color: white;
+.controls-bar .search-input:focus {
+    outline: none; border-color: #063970; background-color: white;
 }
-
 .search-results {
-    margin-top: 10px;
-    padding: 8px;
-    color: #666;
-    font-style: italic;
-    display: none;
+    margin-top: 10px; padding: 8px; color: #666; font-style: italic; display: none;
 }
-
 /* Posts Control (right of search) */
-.posts-control {
-    margin: 0 0 0 auto;    /* push to the right */
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    white-space: nowrap;
+.controls-bar .posts-control {
+    margin-left: auto;
+    display: flex; align-items: center; gap: 8px; white-space: nowrap;
 }
-.posts-control label {
-    font-weight: 500;
-    color: #333;
-    margin: 0;
-}
+.posts-control label { font-weight: 500; color: #333; margin: 0; }
 .posts-control select {
-    padding: 6px 12px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    background-color: white;
-    font-size: 14px;
+    padding: 6px 12px; border: 2px solid #ddd; border-radius: 5px;
+    background-color: white; font-size: 14px;
 }
-.posts-control select:focus {
-    outline: none;
-    border-color: #063970;
-}
+.posts-control select:focus { outline: none; border-color: #063970; }
 
 /* ---------- Tag Filter Section ---------- */
 .tag-filter-section {
-    margin: 25px 0;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin: 25px 0; padding: 20px; background: #f8f9fa;
+    border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-
-.tag-filter-section h4 {
-    margin: 0;
-    color: #063970;
-    font-size: 16px;
-    font-weight: 600;
-}
+.tag-filter-section h4 { margin: 0; color: #063970; font-size: 16px; font-weight: 600; }
 
 /* Header row: title left, toggle right */
 .tag-filter-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;
 }
-
-/* Toggle button styling */
 .toggle-tags-btn {
-    background: #f0f0f0;
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    padding: 4px 10px;
-    font-size: 13px;
-    cursor: pointer;
+    background: #f0f0f0; border: 2px solid #ddd; border-radius: 6px;
+    padding: 4px 10px; font-size: 13px; cursor: pointer;
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
-.toggle-tags-btn:hover {
-    background-color: #D1E4F7;
-    border-color: #063970;
-    color: #063970;
-}
+.toggle-tags-btn:hover { background-color: #D1E4F7; border-color: #063970; color: #063970; }
 
-/* Horizontal Tag Filter Styles */
+/* Column-wise tag layout: top->bottom per column */
 .tag-filter-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    align-items: center;
+    display: grid;
+    grid-auto-flow: column;              /* fill down the column first */
+    grid-auto-columns: max-content;      /* size columns to chip content */
+    grid-row-gap: 8px;
+    grid-column-gap: 12px;
+    align-items: start;
 }
 
+/* Tag chip */
 .tag-filter {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 12px;
-    background: white;
-    border: 2px solid transparent;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-size: 14px;
-    white-space: nowrap;
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 12px; background: white;
+    border: 2px solid transparent; border-radius: 20px;
+    cursor: pointer; transition: all 0.2s ease; font-size: 14px; white-space: nowrap;
 }
-
-.tag-filter:hover {
-    border-color: #D1E4F7;
-    background: #f0f7ff;
-    transform: translateY(-1px);
-}
-
-.tag-filter.active {
-    border-color: #063970;
-    background: #063970;
-    color: white;
-}
-
-.tag-filter.active .tag-count {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-}
-
-.tag-name {
-    font-weight: 500;
-}
-
+.tag-filter:hover { border-color: #D1E4F7; background: #f0f7ff; transform: translateY(-1px); }
+.tag-filter.active { border-color: #063970; background: #063970; color: white; }
+.tag-filter.active .tag-count { background: rgba(255,255,255,0.2); color: white; }
+.tag-name { font-weight: 500; }
 .tag-count {
-    background: #e9ecef;
-    color: #666;
-    padding: 2px 6px;
-    border-radius: 10px;
-    font-size: 11px;
-    font-weight: bold;
-    min-width: 18px;
-    text-align: center;
-    line-height: 1.2;
+    background: #e9ecef; color: #666; padding: 2px 6px; border-radius: 10px;
+    font-size: 11px; font-weight: bold; min-width: 18px; text-align: center; line-height: 1.2;
 }
 
 /* Make blog tags clickable */
-.clickable-tag {
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-.clickable-tag:hover {
-    background-color: #063970 !important;
-    color: white !important;
-    transform: translateY(-1px);
-}
+.clickable-tag { cursor: pointer; transition: all 0.2s ease; }
+.clickable-tag:hover { background-color: #063970 !important; color: white !important; transform: translateY(-1px); }
 
 /* Blog Layout - No Sidebar */
 .blog-layout { width: 100%; }
-.blog-main {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
+.blog-main { width: 100%; max-width: 1000px; margin: 0 auto; }
 
 /* Blog styling - Full Width */
 .blog-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    width: 100%;
+    display: flex; flex-direction: column; gap: 20px; align-items: center; width: 100%;
 }
-
 .blog-card {
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    max-width: 900px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    display: flex; flex-direction: row;
+    width: 90%; max-width: 900px; background: white; border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
 .blog-card:hover { transform: scale(1.02); }
-
-.blog-thumbnail-container {
-    flex: 1;
-    overflow: hidden;
-    position: relative;
-}
-.blog-thumbnail {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.blog-details {
-    flex: 2;
-    padding: 20px;
-    text-align: left;
-}
-.blog-details h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-.blog-date {
-    font-size: 0.9em;
-    color: #888;
-    margin-bottom: 10px;
-    font-style: italic;
-}
+.blog-thumbnail-container { flex: 1; overflow: hidden; position: relative; }
+.blog-thumbnail { width: 100%; height: 100%; object-fit: cover; }
+.blog-details { flex: 2; padding: 20px; text-align: left; }
+.blog-details h2 { font-size: 1.5em; margin-bottom: 10px; }
+.blog-date { font-size: 0.9em; color: #888; margin-bottom: 10px; font-style: italic; }
 .blog-details p { font-size: 1em; color: #555; }
 
 /* Blog tags in the details section */
-.blog-tags {
-    margin: 10px 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
+.blog-tags { margin: 10px 0; display: flex; flex-wrap: wrap; gap: 6px; }
 .blog-tag {
-    background-color: #e9ecef;
-    color: #063970;
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 13px;
-    font-weight: 500;
-    transition: background-color 0.2s ease;
+    background-color: #e9ecef; color: #063970; padding: 4px 8px;
+    border-radius: 12px; font-size: 13px; font-weight: 500; transition: background-color 0.2s ease;
 }
 .blog-tag:hover { background-color: #D1E4F7; }
 
-.read-more {
-    display: inline-block;
-    margin-top: 10px;
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-}
+.read-more { display: inline-block; margin-top: 10px; color: #007BFF; text-decoration: none; font-weight: bold; }
 .read-more:hover { text-decoration: underline; }
 
 /* Load More Button */
-.load-more-container {
-    text-align: center;
-    margin-top: 30px;
-    padding: 20px 0;
-}
+.load-more-container { text-align: center; margin-top: 30px; padding: 20px 0; }
 .load-more-btn {
-    padding: 12px 24px;
-    background-color: #063970;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    padding: 12px 24px; background-color: #063970; color: white; border: none; border-radius: 5px;
+    font-weight: bold; cursor: pointer; font-size: 16px; transition: background-color 0.3s ease;
 }
-.load-more-btn:hover {
-    background-color: #D1E4F7;
-    color: #063970;
-}
+.load-more-btn:hover { background-color: #D1E4F7; color: #063970; }
 
 /* Pagination Styles */
 .pagination {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
-    padding: 20px 0;
-    border-top: 1px solid #eee;
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 30px; padding: 20px 0; border-top: 1px solid #eee;
 }
 .pagination-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #063970;
-    color: white;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    display: inline-block; padding: 10px 20px; background-color: #063970; color: white;
+    text-decoration: none; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease;
 }
-.pagination-btn:hover:not(:disabled) {
-    background-color: #D1E4F7;
-    color: #063970;
-}
-.pagination-btn:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-.pagination-info {
-    font-size: 16px;
-    color: #666;
-    font-weight: 500;
-}
+.pagination-btn:hover:not(:disabled) { background-color: #D1E4F7; color: #063970; }
+.pagination-btn:disabled { background-color: #ccc; cursor: not-allowed; }
+.pagination-info { font-size: 16px; color: #666; font-weight: 500; }
 
 /* Improve spacing between bullets */
 ul li { margin-bottom: 0.4em; }
@@ -433,33 +203,22 @@ ul li { margin-bottom: 0.4em; }
 @media (max-width: 768px) {
     .blog-card { flex-direction: column; width: 95%; }
     .blog-thumbnail-container { height: 200px; }
-    .search-input { width: 100%; }
-
-    .pagination {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
+    .pagination { flex-direction: column; gap: 15px; text-align: center; }
     .nav-links { flex-direction: column; gap: 5px; }
     .nav-container { flex-direction: column; gap: 10px; }
 }
-
-@media (max-width: 640px) {
-    .controls-bar {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-    }
-    .posts-control {
-        margin-left: 0;
-        justify-content: flex-end;
-    }
-}
-
-@media (max-width: 480px) {
-    .tag-filter-header {
-        flex-direction: column;
-        align-items: flex-start;
+/* On tablets/phones, simplify the tag layout to wrapping row chips */
+@media (max-width: 768px) {
+    .tag-filter-container {
+        display: flex;
+        flex-wrap: wrap;
         gap: 8px;
     }
+}
+@media (max-width: 640px) {
+    .controls-bar { flex-direction: column; align-items: stretch; gap: 10px; }
+    .controls-bar .posts-control { margin-left: 0; justify-content: flex-end; }
+}
+@media (max-width: 480px) {
+    .tag-filter-header { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
