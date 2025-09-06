@@ -4,6 +4,7 @@ title: The Organized Data Scientist
 date: 2025-08-11
 thumbnail: /assets/images/organized.png
 description: Maximizing the impact of your data science project with a battle-tested project template
+tags: [best-practices, coding, data-science, automation, Python, R]
 ---
 
 # 📊 The Organized Data Scientist: Maximizing Impact with a Battle-Tested Project Template
