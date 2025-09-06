@@ -4,6 +4,7 @@ title: Ditching Microsoft Word for LaTeX
 date: 2025-08-03
 thumbnail: /assets/images/resume_latex.png
 description: Why I decided to take the leap and build a resume template that actually works
+tags: [LaTeX, career-development, coding, automation]
 ---
 
 # Why I‘m ditching Microsoft Word for LaTeX and built a resume template that actually works
