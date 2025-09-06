@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: default
 title: Blog
 permalink: /blog/
 ---
@@ -9,10 +9,9 @@ permalink: /blog/
 
 
 <!-- The code below is how the page used to work before pagination was added in -->
-<!--
+
 
 {% for post in site.posts %}
 - [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%B %d, %Y" }}
 {% endfor %}
 
--->
