@@ -44,7 +44,7 @@
                             <span class="tag-name">All Posts</span>
                             <span class="tag-count" id="all-count">0</span>
                         </div>
-                        <div id="tag-filters"></div>
+                        <!-- <div id="tag-filters"></div> NOT USING THIS CODE MAKES EACH TAG A GRID ITEM VS WRAPPED BLOCK -->
                     </div>
                 </div>
                 
@@ -180,7 +180,16 @@
                 allCountSpan.textContent = totalPosts;
 
                 // Append dynamic tags AFTER the "All Posts" chip
-                const target = tagFilters || tagContainer;
+                
+                // old - add chips to the wrapper
+                // const target = tagFilters || tagContainer;
+
+                // new - add chips to the grid, not to the wrapper
+                // making each chip a direct child of the grid >> ...
+                // ... the container can pack items top -> bottom, then left -> right across four columns
+                // ... without that wrapper forcing the first column to be full width
+                const target = tagContainer
+                
                 sortedTags.forEach(([tag, count]) => {
                     const tagFilter = document.createElement('div');
                     tagFilter.className = 'tag-filter';
