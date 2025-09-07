@@ -60,9 +60,9 @@ main {
     flex-wrap: wrap;
 }
 /* Narrower but flexible search */
-.controls-bar .search-container {
+.controls-bar .search-container { /* tweak the width parameters in the next two rows to make search bar wider/narrower */
     flex: 1 1 520px;   /* preferred width ~520px, can shrink or grow */
-    max-width: 600px;  /* hard cap to avoid hogging the row */
+    max-width: 520px;  /* hard cap to avoid hogging the row */
     margin-bottom: 0;
     text-align: left;
 }
