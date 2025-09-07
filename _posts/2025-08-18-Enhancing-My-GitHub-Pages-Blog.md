@@ -11,7 +11,7 @@ tags: [GitHub, coding, web-development, JavaScript, creativity, CSS]
 
 My GitHub Pages blog [started simple](https://nathanwatkinsdc.github.io/2025/07/23/How-I-Built-This-Site-with-GitHub-Pages.html) with a clean layout, four pages, and a growing collection of posts, but as I added content, the blog page began to become unwieldy. Posts piled up in a long list with no way to filter or navigate efficiently.
 
-I would have benefited from a [content management system](https://en.wikipedia.org/wiki/Content_management_system#:~:text=A%20content%20management%20system%20(CMS,typically%20includes%20a%20WCM%20function.) like WordPress, but I wanted to stick to GitHub Pages despite its constraints like no databases or server-side processing. These constraints didn't get me down, though, as I tend to believe that the best creative outcomes come from experimentation under constraints (so long as the cost of experimenting isn't too high, which it wasn't in this case).
+I would have benefited from a [content management system](https://en.wikipedia.org/wiki/Content_management_system) like WordPress, but I wanted to stick to GitHub Pages despite its constraints like no databases or server-side processing. These constraints didn't get me down, though, as I tend to believe that the best creative outcomes come from experimentation under constraints (so long as the cost of experimenting isn't too high, which it wasn't in this case).
 
 # 📝 The problem: when success creates problems
 
