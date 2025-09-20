@@ -152,7 +152,7 @@ permalink: /resume/
 	<!-- Resume Download -->
 	<div class="resume-section text-center">
     <h3>📄 Click below to download my resume: </h3>
-    <a href="/assets/Resume Short 20250728.pdf" class="resume-button" target="_blank">
+    <a href="/assets/resume.pdf" class="resume-button" target="_blank">
         Download Resume
     </a>
 	</div>
